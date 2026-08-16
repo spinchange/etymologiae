@@ -1,0 +1,1212 @@
+<title>Etymologiae MMXXVI</title>
+<style>
+  :root {
+    --paper: #FAF8F3;
+    --ink: #26221B;
+    --rubric: #9E2B25;
+    --apparatus: #6E675C;
+    --rule: #E2DCCF;
+    --annex: #F2EEE4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #211E19;
+      --ink: #E6DFD1;
+      --rubric: #D97F6F;
+      --apparatus: #A79D8C;
+      --rule: #3B362D;
+      --annex: #2A2620;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #211E19;
+    --ink: #E6DFD1;
+    --rubric: #D97F6F;
+    --apparatus: #A79D8C;
+    --rule: #3B362D;
+    --annex: #2A2620;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Palatino Linotype', 'Iowan Old Style', 'Book Antiqua', Palatino, Georgia, serif;
+    line-height: 1.62;
+    margin: 0;
+    font-size: 17px;
+  }
+  .page {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 5rem;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--rubric); }
+  a:focus-visible { outline: 2px solid var(--rubric); outline-offset: 2px; border-radius: 1px; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  /* ---------- front matter ---------- */
+  header { text-align: center; margin-bottom: 3.5rem; }
+  .eyebrow {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--apparatus);
+    margin: 0 0 1.4rem;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 6vw, 3.1rem);
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .year {
+    color: var(--rubric);
+    font-size: 1.25rem;
+    letter-spacing: 0.3em;
+    margin: 0.5rem 0 0;
+  }
+  .subtitle {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin: 1.2rem auto 0;
+    max-width: 34rem;
+    text-wrap: balance;
+  }
+  .headrule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.6rem auto 0;
+    width: 8rem;
+    position: relative;
+  }
+
+  /* ---------- preface ---------- */
+  .praefatio { margin: 0 auto 3.5rem; }
+  .praefatio h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--rubric);
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 1.4rem;
+  }
+  .praefatio p { margin: 0 0 1em; }
+  .praefatio p:first-of-type::first-letter {
+    color: var(--rubric);
+    font-size: 3.2em;
+    line-height: 0.82;
+    float: left;
+    padding: 0.06em 0.12em 0 0;
+  }
+  .apparatus-note {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.82rem;
+    color: var(--apparatus);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.9rem 0.2rem;
+    margin-top: 2rem;
+  }
+  .apparatus-note b { font-weight: 600; color: var(--ink); }
+
+  /* ---------- index ---------- */
+  .index { margin: 0 0 4rem; }
+  .index h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--rubric);
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 1.6rem;
+  }
+  .index ol {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 0.35rem;
+  }
+  @media (max-width: 560px) { .index ol { grid-template-columns: 1fr; } }
+  .index li a {
+    display: flex;
+    gap: 0.7rem;
+    baseline-source: first;
+    padding: 0.1rem 0;
+  }
+  .index .n {
+    color: var(--rubric);
+    min-width: 2.4rem;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+  .index .t { font-style: normal; }
+  .index li a:hover .t { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---------- books ---------- */
+  .asterism {
+    text-align: center;
+    color: var(--rubric);
+    font-size: 1.1rem;
+    margin: 3.8rem 0;
+    user-select: none;
+  }
+  .liber { scroll-margin-top: 2rem; }
+  .liber-head { text-align: center; margin-bottom: 1.6rem; }
+  .liber-num {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--apparatus);
+    margin: 0 0 0.7rem;
+  }
+  .liber h2.titulus {
+    font-size: 1.45rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rubric);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .gloss {
+    font-style: italic;
+    font-size: 1.02rem;
+    margin: 0.45rem 0 0;
+  }
+  .fontes {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.78rem;
+    color: var(--apparatus);
+    margin: 0.8rem 0 0;
+  }
+  .argumentum {
+    font-style: italic;
+    margin: 0 auto 1.5rem;
+    max-width: 38rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .argumentum::before {
+    content: "Argumentum. ";
+    font-style: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.06em;
+    color: var(--rubric);
+  }
+  ol.capitula {
+    margin: 0;
+    padding: 0 0 0 2.6rem;
+    font-size: 0.97rem;
+    line-height: 1.5;
+  }
+  @media (min-width: 720px) {
+    ol.capitula { columns: 2; column-gap: 3rem; padding-left: 2.2rem; }
+    ol.capitula li { break-inside: avoid; }
+  }
+  ol.capitula li { margin-bottom: 0.4rem; padding-left: 0.3rem; }
+  ol.capitula li::marker {
+    color: var(--rubric);
+    font-variant-numeric: tabular-nums;
+  }
+  .annexus {
+    background: var(--annex);
+    border-left: 2px solid var(--rubric);
+    padding: 0.15rem 0.6rem 0.15rem 0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  /* ---------- written chapters (carmina) ---------- */
+  .carmen {
+    margin: 2.4rem auto 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.8rem;
+  }
+  .carmen-head {
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+  .carmen-num {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--rubric);
+    margin: 0 0 0.4rem;
+  }
+  .carmen h3 {
+    font-size: 1.08rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .scriba {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.75rem;
+    color: var(--apparatus);
+    margin: 0.4rem 0 0;
+  }
+  .verse {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  .verse p.stanza {
+    white-space: pre-line;
+    margin: 0 0 1.15em;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .verse p.canto {
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    color: var(--rubric);
+    margin: 1.4em 0 0.6em;
+    font-size: 0.95rem;
+  }
+  .verse p.canto:first-child { margin-top: 0; }
+
+  /* ---------- colophon ---------- */
+  .colophon {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--apparatus);
+    font-style: italic;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  .colophon .mark { color: var(--rubric); font-style: normal; font-size: 1.1rem; display: block; margin-bottom: 0.9rem; }
+</style>
+
+<div class="page">
+
+<header>
+  <p class="eyebrow">After Isidore of Seville · Bishop, Compiler, d. 636</p>
+  <h1>Etymologiae</h1>
+  <p class="year">MMXXVI</p>
+  <p class="subtitle">The twenty books, brought up to the present year: a conspectus of chapters.</p>
+  <hr class="headrule">
+</header>
+
+<section class="praefatio">
+  <h2>Praefatio</h2>
+  <p>Isidore ordered his twenty books by the great chain of being, descending from grammar and God to the utensils of the household. Fourteen centuries broke the chain; what replaced it is emergence. The books below therefore climb — from the rules, through matter and life and mind, to the things mind builds — each standing on the ones before it, ending where the first began: at an instrument that speaks.</p>
+  <p>In the manner of the original, chapter titles are claims, not labels: the title tells you what the chapter would have you believe. Also in the manner of the original, the compiler asserts one order for all knowledge and signs his name to it, which is the part of the method fourteen centuries could not improve.</p>
+  <div class="apparatus-note">
+    <b>Apparatus.</b> Red is rubric, as in the manuscripts. The bracketed note beneath each title — ⟨ Orig. XVI ⟩ — is a concordance to the book of Isidore's <i>Origines</i> from which the new book descends. <b>⟨ sine fonte ⟩</b> marks a book with no ancestor: knowledge acquired since 636.
+  </div>
+</section>
+
+<nav class="index">
+  <h2>Index Librorum</h2>
+  <ol>
+    <li><a href="#liber-1"><span class="n">I</span><span class="t">Mathematica</span></a></li>
+    <li><a href="#liber-11"><span class="n">XI</span><span class="t">Homo</span></a></li>
+    <li><a href="#liber-2"><span class="n">II</span><span class="t">De Fortuna</span></a></li>
+    <li><a href="#liber-12"><span class="n">XII</span><span class="t">Mens</span></a></li>
+    <li><a href="#liber-3"><span class="n">III</span><span class="t">De Methodo</span></a></li>
+    <li><a href="#liber-13"><span class="n">XIII</span><span class="t">Lingua</span></a></li>
+    <li><a href="#liber-4"><span class="n">IV</span><span class="t">Physica</span></a></li>
+    <li><a href="#liber-14"><span class="n">XIV</span><span class="t">Societas</span></a></li>
+    <li><a href="#liber-5"><span class="n">V</span><span class="t">Cosmos</span></a></li>
+    <li><a href="#liber-15"><span class="n">XV</span><span class="t">De Sacris</span></a></li>
+    <li><a href="#liber-6"><span class="n">VI</span><span class="t">De Elementis</span></a></li>
+    <li><a href="#liber-16"><span class="n">XVI</span><span class="t">Leges et Civitas</span></a></li>
+    <li><a href="#liber-7"><span class="n">VII</span><span class="t">Terra</span></a></li>
+    <li><a href="#liber-17"><span class="n">XVII</span><span class="t">Oeconomica</span></a></li>
+    <li><a href="#liber-8"><span class="n">VIII</span><span class="t">Vita</span></a></li>
+    <li><a href="#liber-18"><span class="n">XVIII</span><span class="t">Historia</span></a></li>
+    <li><a href="#liber-9"><span class="n">IX</span><span class="t">De Origine Specierum</span></a></li>
+    <li><a href="#liber-19"><span class="n">XIX</span><span class="t">Artes</span></a></li>
+    <li><a href="#liber-10"><span class="n">X</span><span class="t">Animalia et Herbae</span></a></li>
+    <li><a href="#liber-20"><span class="n">XX</span><span class="t">Machinae Loquentes</span></a></li>
+  </ol>
+</nav>
+
+<section class="liber" id="liber-1">
+  <div class="liber-head">
+    <p class="liber-num">Liber I</p>
+    <h2 class="titulus">Mathematica</h2>
+    <p class="gloss">Number, logic, and proof — the grammar of everything after</p>
+    <p class="fontes">⟨ Orig. I · III ⟩ — grammar's throne, taken by number</p>
+  </div>
+  <p class="argumentum">Isidore opened with grammar because words were how you knew anything. The first book must now be the notation the universe is written in.</p>
+  <ol class="capitula">
+    <li>Of Number, and How Counting Began</li>
+    <li>Of Zero, Negative Quantities, and Other Scandals</li>
+    <li>Of Arithmetic, and the Stubbornness of Primes</li>
+    <li>Of Geometry, the Measure of Earth and of Space</li>
+    <li>Of Algebra, or Reasoning with the Unknown</li>
+    <li>Of Functions, and the Mathematics of Change</li>
+    <li>Of Logic and Proof, the Court of Last Appeal</li>
+    <li>Of the Infinite, and Its Several Sizes</li>
+    <li>Of Foundations, and the Limits Proof Set upon Itself</li>
+    <li>Of the Unreasonable Effectiveness of All the Above</li>
+  </ol>
+  <div class="carmen">
+    <div class="carmen-head">
+      <p class="carmen-num">Capitulum 1</p>
+      <h3>Of Number, and How Counting Began</h3>
+      <p class="scriba">scripsit Opus · heroic couplets, after Erasmus Darwin</p>
+    </div>
+    <div class="verse">
+      <p class="stanza">Before the letter, and before the line,
+Before a scribe conceived a curling sign,
+The mind laid one thing down against one more
+And found the world would answer, score for score.
+Not yet a name, not yet a numeral drawn—
+A pebble laid at dusk, retrieved at dawn.</p>
+      <p class="stanza">Count out the sheep. The shepherd cannot read;
+He needs no alphabet, he needs a creed
+Of matching: stone for ewe, and ewe for stone,
+The flock made portable, the field made known.
+Should one stone linger in the emptied pail,
+Some lamb is lost. Arithmetic, in Braille.</p>
+      <p class="stanza">Look down: you carry ten upon your hands,
+The oldest abacus in all the lands.
+From <i>digitus</i>, a finger—hence the <i>digit</i>,
+And every ledger's column is its midget
+Descendant, marching in obedient rows,
+Still shaped by what we happen to have—toes
+Included, some cultures counted twenty whole,
+And <i>score</i> preserves the notch, the tally's toll:
+Old Norse for <i>cut</i>—a scoring in the wood,
+Twenty cut deep where twenty sheep once stood.</p>
+      <p class="stanza">The bone from Ishango bears its scratched accounts
+Some twenty thousand years before amounts
+Had names in ink; the <i>tally</i> keeps its stem
+In <i>talea</i>, a cutting or a stem
+Of rod—the sticks the Exchequer would split,
+Each half a proof, and neither half a cheat.
+So notches came before the numeral's grace:
+The tally is the numeral's elder face.</p>
+      <p class="stanza">In Uruk's clay, small tokens—cone, disc, sphere—
+Were sealed in hollow balls to make it clear
+What debts the jar contained. But sealed is blind.
+So someone pressed the token, first, behind
+Its own imprisonment—impressed the sign
+Upon the shell, then asked: why not the line
+Alone? Why keep the pebble in the pot?
+And cuneiform was born of what was not
+Yet literature: a bailiff's inventory.
+Accounting authored writing. That's the story.</p>
+      <p class="stanza">The Romans reckoned with a pebble too:
+<i>Calculus</i>—small stone—from which there grew
+Our <i>calculate</i>. Consider, when you sit
+And drive a spreadsheet, you are shaking grit.</p>
+      <p class="stanza">Then zero came, and no one wanted it.
+A nothing you could write? Absurd. Unfit.
+India named it <i>śūnya</i>—void, the space—
+The Arabs carried <i>sifr</i> through, whose face
+Gave <i>cipher</i> and gave <i>zero</i> both at once
+(A word that meant <i>a nothing</i> and <i>a dunce's</i>
+<i>code</i>). Florence banned the thing in 'twenty-nine
+Of thirteen hundred: easy to malign,
+Too easy to forge a nine into a nought.
+The abacus men fought it. And they fought
+The negatives still longer—debts made real,
+Absurd quantities no hand could feel,
+Called <i>false</i> by Cardano, <i>fictive</i>, <i>less than naught</i>,
+Till bookkeeping insisted what math thought
+Was monstrous: that a lack can hold a place,
+And nothing, written, occupies a space.</p>
+      <p class="stanza">One last inheritance your mouth still keeps:
+Say <i>eleven</i>, <i>twelve</i>. Beneath them sleeps
+A Germanic ten with something left behind—
+<i>ainlif</i>, <i>twalif</i>: <i>one left</i>, <i>two left</i>. Mind
+The fossil in the phrase. We counted ten,
+Then found a stubborn surplus, and stopped, then
+Began again. Which is the whole of it:
+To lay one thing on one, and not forget.
+All twenty books that follow this one are
+That gesture, elaborated very far.</p>
+    </div>
+  </div>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-2">
+  <div class="liber-head">
+    <p class="liber-num">Liber II</p>
+    <h2 class="titulus">De Fortuna</h2>
+    <p class="gloss">Probability, statistics, and the taming of chance</p>
+    <p class="fontes">⟨ sine fonte ⟩ — the proudest addition; no ancestor in the Origines</p>
+  </div>
+  <p class="argumentum">Isidore's world held the known, the unknown, and the portent. The formalization of uncertainty is the largest single acquisition since him, and everything downstream leans on it.</p>
+  <ol class="capitula">
+    <li>Of Dice, Lots, and Divination — Chance before Its Science</li>
+    <li>Of the Wager of Two Frenchmen, Anno 1654</li>
+    <li>Of Probability and Its Few Laws</li>
+    <li>Of Distributions, and Why the Bell Recurs</li>
+    <li>Of Large Numbers and Their Law</li>
+    <li>Of Statistics, or Arguing Honestly from Samples</li>
+    <li>Of the Reverend Bayes, and the Updating of Belief</li>
+    <li>Of Correlation, and Why It Is Not Cause</li>
+    <li>Of Risk, Insurance, and the Price of the Future</li>
+    <li>Of Randomness Itself, and Whether It Exists</li>
+    <li>Of the Abuses — the Lying Average, the Gambler's Ruin, the Tortured Datum</li>
+  </ol>
+  <div class="carmen">
+    <div class="carmen-head">
+      <p class="carmen-num">Capitulum 2</p>
+      <h3>Of the Wager of Two Frenchmen, Anno 1654</h3>
+      <p class="scriba">scripsit Sonnet · a linked pair of sonnets</p>
+    </div>
+    <div class="verse">
+      <p class="stanza">The dice were Fortune's mouthpiece once, her voice
+thrown down in ivory to speak the will
+no man could read by reason or by choice —
+each fall was verdict, oracle, or bill
+of debt to gods appeased by casting lots.
+The Arabs called the die <i>al-zahr</i>; from this
+came <i>hazard</i>, borrowed word for what the plots
+of heaven hid, and named the wound, the abyss
+of not-knowing. Chevalier de Méré
+lost money on a game cut short by chance,
+some interrupted evening's dice-play — hey,
+who owns the pot when no one's had their dance
+clean through to the end? He asked a friend in Paris.
+That friend asked Fermat. Something new grew wary.</p>
+      <p class="stanza">Not wary — <i>rigorous</i>. Pascal sat down
+and counted, not the fall, but what could fall:
+each branching path the unplayed rounds might crown,
+weighed out and summed, a ledger for it all.
+No priest, no augur, just arithmetic
+where chance itself was cut in equal shares
+by counting futures — cold, exact, and quick —
+the first time dice were made to answer prayers
+with numbers, not with gods. The wager's stakes
+were split by likelihood, not luck, not grace.
+And Pascal, having tamed the throw that breaks
+all men to guesswork, later bet his face
+on God himself — one throw, infinite prize —
+the man who'd solved the dice still hedged the skies.</p>
+    </div>
+  </div>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-3">
+  <div class="liber-head">
+    <p class="liber-num">Liber III</p>
+    <h2 class="titulus">De Methodo</h2>
+    <p class="gloss">Observation, experiment, and the discipline of error</p>
+    <p class="fontes">⟨ Orig. II ⟩ — rhetoric and dialectic, reborn as method</p>
+  </div>
+  <p class="argumentum">We did not stop having arts of persuasion; we replaced them with experiment, evidence, and review. How we argue now deserves its own book near the top.</p>
+  <ol class="capitula">
+    <li>Of What Counts as Knowing</li>
+    <li>Of Observation, and the Extension of the Senses</li>
+    <li>Of Measurement, Units, and Agreement upon the Meter</li>
+    <li>Of Experiment, and the Art of the Control</li>
+    <li>Of Hypothesis, and How to Kill One</li>
+    <li>Of Models and Simulations, Maps That Are Not the Territory</li>
+    <li>Of Review by Peers, of Replication, and of Its Present Crisis</li>
+    <li>Of Error, Systematic and Random, Confessed in the Margin</li>
+    <li>Of Fraud and Self-Deception, the Twin Corruptions</li>
+    <li>Of the Questions Method Cannot Answer</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-4">
+  <div class="liber-head">
+    <p class="liber-num">Liber IV</p>
+    <h2 class="titulus">Physica</h2>
+    <p class="gloss">Matter, energy, and the four forces</p>
+    <p class="fontes">⟨ sine fonte fere ⟩ — faint traces only, scattered through Orig. XIII</p>
+  </div>
+  <p class="argumentum">The rules the first three books describe turn out to govern something. This book is the constitution of the physical world, so far as it has been read.</p>
+  <ol class="capitula">
+    <li>Of Motion, and Its Three Laws</li>
+    <li>Of Energy, and Its Strict Conservation</li>
+    <li>Of Heat, Entropy, and the Arrow of Time</li>
+    <li>Of Electricity and Magnetism, One Force in Two Coats</li>
+    <li>Of Light, and What It Turned Out to Be</li>
+    <li>Of Relativity, Special and General, and the Bending of the Stage</li>
+    <li>Of the Quantum, and the End of Certainty Below</li>
+    <li>Of the Particles, and Their Standard Model</li>
+    <li>Of Symmetry, the Deepest Law Yet Found</li>
+    <li>Of What Remains Dark — Matter, Energy, and Gravity's Quantum</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-5">
+  <div class="liber-head">
+    <p class="liber-num">Liber V</p>
+    <h2 class="titulus">Cosmos</h2>
+    <p class="gloss">The universe, from first light to last</p>
+    <p class="fontes">⟨ Orig. III · XIII ⟩ — astronomy and De mundo, merged and enlarged</p>
+  </div>
+  <p class="argumentum">Isidore's heavens were a ceiling. Ours are an archive: to look far is to look back, and the sky is the one history book that cannot be redacted.</p>
+  <ol class="capitula">
+    <li>Of the Scale of Things, and How to Bear It</li>
+    <li>Of the Beginning, and Its Three Evidences</li>
+    <li>Of Stars — Their Birth, Their Burning, and Their Deaths</li>
+    <li>Of the Forge of Elements, Wherein Book VI Is Smelted</li>
+    <li>Of Galaxies, and the Web They Weave</li>
+    <li>Of the Sun and Its Family</li>
+    <li>Of the Moon, the Tides, and the Origin of the Calendar</li>
+    <li>Of Other Worlds, Now Counted in Thousands</li>
+    <li>Of the End of All Things, Considered Calmly</li>
+    <li>Of the Silence, and Whether We Are Alone</li>
+  </ol>
+  <div class="carmen">
+    <div class="carmen-head">
+      <p class="carmen-num">Capitulum 9</p>
+      <h3>Of the End of All Things, Considered Calmly</h3>
+      <p class="scriba">scripsit Opus · blank verse, after Lucretius</p>
+    </div>
+    <div class="verse">
+      <p class="stanza">Consider: the word itself is made of stars.
+The Romans built it out of <i>con</i> and <i>sidera</i>,
+to be with the constellations, and it named
+that steadiness the augur practiced, standing
+all night beneath the turning wheel of lights
+to read them without hurry. Its dark twin,
+<i>disaster</i>, is <i>dis-astro</i>, the unstarred hour,
+the fate that comes when heaven has withdrawn.
+Both words are literal now. We are the age
+that still has stars to be considered with,
+and everything that follows is the slow
+subtraction of them from the reader's sky.</p>
+      <p class="stanza">Five billion years, and this sun's hydrogen
+runs thin; the core contracts, the shell ignites,
+and outward swells a red and swollen lamp
+to take in Mercury, then Venus, then
+whatever ocean is left on this third world,
+boiled off long before the fire arrives.
+That is the local grief, and it is small.
+The larger motion is already underway:
+the space between the galaxies is growing,
+and growing faster, so that one by one
+the far ones cross a threshold past which light
+sent toward us now will never reach us — not
+delayed, but never — and the sky thins out
+like a hall emptying, each guest withdrawing
+through a door that shuts behind them. Give it time
+enough and a late astronomer will lift
+a faultless instrument to a black field
+and find one island, his own merged cluster, hung
+in nothing, and conclude — with perfect method,
+with no error he could possibly detect —
+that this is all there is, and always was.
+He cannot learn what we can simply look at.
+Set that beside your griefs and weigh it: we
+were born inside the window of the evidence.</p>
+      <p class="stanza">Meanwhile the gas that makes new stars is spent
+in burning; galaxies keep no reserve
+they do not slowly squander. Star formation
+gutters, then stops. What burned already cools:
+white dwarfs to black, the neutron stars gone quiet,
+the last red dwarfs outlasting all the rest
+by being miserly, then also out.
+Then the long tenancy of the black holes,
+which are not hungry, only patient, and which
+leak — Hawking showed the arithmetic —
+a thin heat at the border, so that even
+they evaporate, on a clock whose zeros
+would exhaust the paper we could ever make.</p>
+      <p class="stanza">And after that, no bang, no judgment, no
+consuming fire: the opposite of fire.
+Clausius, needing a name, took Greek <i>tropē</i>,
+a turning, a transformation, and then filed
+its edges down to rhyme with energy,
+so the two words would travel as a pair —
+<i>entropy</i>, the measure of how far
+a difference has already been spent.
+The end is when no difference remains:
+one temperature, no current anywhere,
+nothing that can be used to do a thing,
+and therefore nothing happening at all.
+Equilibrium. The quietest of ends.</p>
+      <p class="stanza">The old book put Apocalypse in this position.
+We put thermodynamics. The genre holds —
+both editions end their world — but ours declines
+the trumpet, and refuses to be frightened
+of a state in which there is no one to fear it.
+No one will suffer the heat death. It is not
+an event that finds us; it is the last
+page of a book we occupy near the front,
+in the loud bright chapters, while the sky still teaches.
+Consider it, then, the old way, with the stars:
+not as a sentence handed down, but as
+the far end of a magnitude, the way
+you hold a number you will never count to.
+The lights are on. Read now. That is the whole
+instruction, and it has always been the whole.</p>
+    </div>
+  </div>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-6">
+  <div class="liber-head">
+    <p class="liber-num">Liber VI</p>
+    <h2 class="titulus">De Elementis</h2>
+    <p class="gloss">Chemistry — the true book of stones and metals</p>
+    <p class="fontes">⟨ Orig. XVI ⟩ — the biggest promotion: from the basement to the bearing wall</p>
+  </div>
+  <p class="argumentum">Isidore parked minerals deep in the sublunary cellar. It turned out the cellar was holding up the house.</p>
+  <ol class="capitula">
+    <li>Of the Atom, Long Denied, at Last Seen</li>
+    <li>Of the Table of Elements, and Why Its Shape Is Law</li>
+    <li>Of Bonds, the Marriages of Atoms</li>
+    <li>Of the States of Matter, and Their Crossings</li>
+    <li>Of Reactions, and Fire Rethought</li>
+    <li>Of Acids, Bases, and the Rusting of the World</li>
+    <li>Of Carbon, the Promiscuous Element</li>
+    <li>Of Polymers, and the Invented Materials</li>
+    <li>Of the Chemistry of Kitchen and Bath — Cooking, Soap, and Ferment</li>
+    <li>Of Synthesis, and the Bread Drawn from Air</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-7">
+  <div class="liber-head">
+    <p class="liber-num">Liber VII</p>
+    <h2 class="titulus">Terra</h2>
+    <p class="gloss">The earth, its depths, airs, and changing climate</p>
+    <p class="fontes">⟨ Orig. XIV ⟩ — the geography, given a moving floor</p>
+  </div>
+  <p class="argumentum">The ground is not the stage but an actor: the continents drift, the climate is a system with a memory, and the portents of earthquake and eruption have mechanisms now instead of meanings.</p>
+  <ol class="capitula">
+    <li>Of the Earth's Interior, Descended by Inference</li>
+    <li>Of the Plates, and the Slow Dance of Continents</li>
+    <li>Of Rocks, Their Cycle, and the Discovery of Deep Time</li>
+    <li>Of the Ocean, the Larger Kingdom</li>
+    <li>Of the Air, and Its Weathers</li>
+    <li>Of Climate, the Long Mood</li>
+    <li>Of Ice Ages Past, and the Interglacial Present</li>
+    <li>Of Carbon's Circuit, and Man's Thumb upon the Scale</li>
+    <li>Of Earthquake and Volcano, the Portents Explained</li>
+    <li>Of Reading the Archive — Strata, Cores, and Isotopes</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-8">
+  <div class="liber-head">
+    <p class="liber-num">Liber VIII</p>
+    <h2 class="titulus">Vita</h2>
+    <p class="gloss">The cell, the code, and what alive means</p>
+    <p class="fontes">⟨ sine fonte ⟩ — life as mechanism was unavailable to the seventh century</p>
+  </div>
+  <p class="argumentum">Between the stones of Book VI and the beasts of Book X stands a fact Isidore had no shelf for: that life is chemistry that copies itself, and the copying has a script.</p>
+  <ol class="capitula">
+    <li>Of What Alive Means, and the Border Cases</li>
+    <li>Of the Cell, the Common House of All Living</li>
+    <li>Of the Script, Carried in Every Copy</li>
+    <li>Of Proteins, the Workmen of the Script</li>
+    <li>Of Metabolism, or Fire without Flame</li>
+    <li>Of Photosynthesis, the Original Economy</li>
+    <li>Of Reproduction and Development, One Cell Becoming Many</li>
+    <li>Of the Origin of Life, Honestly Confessed Unsolved</li>
+    <li>Of the Three Domains, and the Late Arrival of Ours</li>
+    <li>Of Death, Programmed and Otherwise</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-9">
+  <div class="liber-head">
+    <p class="liber-num">Liber IX</p>
+    <h2 class="titulus">De Origine Specierum</h2>
+    <p class="gloss">Evolution — the true etymology of living forms</p>
+    <p class="fontes">⟨ sine fonte ⟩ — the quiet usurper; it reorganizes every book that follows</p>
+  </div>
+  <p class="argumentum">Isidore sought the origins of things in their names. The actual origines of living forms were found in descent with modification — the method that explains why everything after this book has the shape it has.</p>
+  <ol class="capitula">
+    <li>Of Fixity, and the Long Assumption Before</li>
+    <li>Of Variation and Selection, the Whole Engine in Two Words</li>
+    <li>Of Mendel's Garden, and the Grammar of Heredity</li>
+    <li>Of the Gene, and the Modern Synthesis</li>
+    <li>Of Speciation, or How One Becomes Two</li>
+    <li>Of the Evidences — Fossils, Geography, and Molecules Agreeing</li>
+    <li>Of Sexual Selection, or the Peacock's Defense</li>
+    <li>Of Cooperation, Kinship, and the Puzzle of Kindness</li>
+    <li>Of Man's Own Descent</li>
+    <li>Of Evolution Watched Live — Finches, Microbes, and Plagues</li>
+    <li>Of the Misreadings, Social and Otherwise, Herewith Condemned</li>
+  </ol>
+  <div class="carmen">
+    <div class="carmen-head">
+      <p class="carmen-num">Capitulum 2</p>
+      <h3>Of Variation and Selection, the Whole Engine in Two Words</h3>
+      <p class="scriba">scripsit Opus · heroic couplets, closing the Darwin family circuit</p>
+    </div>
+    <div class="verse">
+      <p class="stanza">Two words contain the whole contraption: mark
+how <i>variation</i> scatters in the dark,
+and <i>selection</i> culls. That's it. No third
+device is hidden underneath the word.
+The Latin tells you plainly what occurs:
+<i>se-</i> apart, and <i>legere</i>, to gather — verse
+and lecture share that root, for those who read
+gather the letters singly as they need.
+So Nature reads the living page, and yet
+has neither eye nor eyelid, nor regret;
+she gathers-apart the way a sieve will do,
+by holding what won't fall, not choosing who.</p>
+      <p class="stanza">Begin with Malthus, ledger-keeper, grim:
+each pair of finches leaves a dozen him
+and her; each cod ten million; and the pond
+supports no more this April than beyond
+last April's margin. Do the sum, and see
+that most that quicken never come to be
+the parents of a thing. The world is small,
+the appetite is infinite. That's all
+the pressure needed. Death is not the tool —
+death is the tuition, and the world the school.</p>
+      <p class="stanza">Now scatter variance across the brood:
+one beak a hair the broader, one the crude
+long-legged error, one whose gut can wring
+a calorie from some unpromising thing.
+None of it aimed. The copying hand will slip
+without a plan, without a partnership
+with what the coming winter has in store.
+The dice are honest. Winter keeps the score.</p>
+      <p class="stanza">And what survives, breeds truer to its kind —
+that's all. Repeat. There is no watching mind
+that tallies which was fitter and rewards it;
+the fit are simply those the world affords yet
+another season to. The rest is time,
+that patient and enormous paradigm,
+that multiplier: take one part in ten
+of one percent, and run it out again
+ten thousand generations, and you get
+a wing, an eye, an orchid's fraudulent
+and perfect bee, whose petals learned to lie
+by nothing but the drift of bee's own eye.</p>
+      <p class="stanza">Doubt it? Then look at what our own short hands
+have bullied out of pigeons in these lands:
+the pouter, fantail, tumbler, all the flock
+descended from one gray unlovely rock
+dove — and in a century or two.
+The wolf became the spaniel. Cabbage grew
+to kale, kohlrabi, broccoli, and sprout,
+one stubborn species turned inside and out.
+If we, half-blind and hurried, forced that much,
+consider what the ages do, who touch
+each generation once, and never tire,
+and have no farm to keep, and no desire.</p>
+      <p class="stanza"><i>Evolve</i> means <i>to unroll</i>, as scrolls unroll —
+a lovely word, and false in its control:
+for nothing was inscribed there in advance.
+The scroll is being written by the chance
+inscription and the blotting of the years.
+The species — from <i>specere</i>, what appears —
+is only how a lineage looked to us
+one afternoon, mid-sentence, mid-thin-crust
+of one geologic instant. Nothing more.
+Two words. No foresight anywhere. No door
+that opened for us. Only this machine:
+things differ; some things last; the rest between.</p>
+    </div>
+  </div>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-10">
+  <div class="liber-head">
+    <p class="liber-num">Liber X</p>
+    <h2 class="titulus">Animalia et Herbae</h2>
+    <p class="gloss">The living catalog, corrected</p>
+    <p class="fontes">⟨ Orig. XII · XVII ⟩ — the bestiary and the garden, joined and audited</p>
+  </div>
+  <p class="argumentum">The bestiary survives; the entries are corrected. The pelican does not feed its young with its blood, but what the lichen actually is turns out stranger than anything Isidore copied from Pliny.</p>
+  <ol class="capitula">
+    <li>Of Naming the Living, from Linnaeus to the Cladists</li>
+    <li>Of Plants, the Silent Majority</li>
+    <li>Of Fungi, a Kingdom Unsuspected</li>
+    <li>Of the Invertebrates, Which Are Most of Everything</li>
+    <li>Of Fishes, and the Coming Ashore</li>
+    <li>Of Reptiles, and the Long Reign of the Dinosaurs</li>
+    <li>Of Birds, the Dinosaurs That Remained</li>
+    <li>Of Mammals, Including the Reader</li>
+    <li>Of the Microbial World, the True Proprietors</li>
+    <li>Of Ecology — Webs, Niches, and Balances</li>
+    <li>Of Symbiosis, and the Lichen's Lesson</li>
+    <li>Of Extinction — Five Times Past, a Sixth Proceeding</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-11">
+  <div class="liber-head">
+    <p class="liber-num">Liber XI</p>
+    <h2 class="titulus">Homo</h2>
+    <p class="gloss">The body and its repair</p>
+    <p class="fontes">⟨ Orig. IV · XI ⟩ — medicine and man, merged; the portents rehabilitated</p>
+  </div>
+  <p class="argumentum">Isidore described man as one more creature, and kept a chapter of monsters. The monsters are returned to the family as variation; the medicine, at last, mostly works.</p>
+  <ol class="capitula">
+    <li>Of the Body's Plan</li>
+    <li>Of the Heart, and the Circuit of the Blood</li>
+    <li>Of Breath, Digestion, and the Interior Economy</li>
+    <li>Of the Immune System, the Body's Border Guard</li>
+    <li>Of the Microbiome — We Are Legion</li>
+    <li>Of Disease, and the Germ at Last Accused</li>
+    <li>Of Medicine's Arsenal — Drug, Knife, and Vaccine</li>
+    <li>Of Inheritance, and Its Disorders</li>
+    <li>Of Birth, Growth, and Aging</li>
+    <li>Of Public Health, Which Saved More Lives Than Surgery</li>
+    <li>Of the Portents Rehabilitated — Variation, Not Omen</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-12">
+  <div class="liber-head">
+    <p class="liber-num">Liber XII</p>
+    <h2 class="titulus">Mens</h2>
+    <p class="gloss">Brain, perception, and the observer examined</p>
+    <p class="fontes">⟨ sine fonte ⟩ — the seventh century kept the soul; we got homework instead</p>
+  </div>
+  <p class="argumentum">The instrument that compiled every book in this collection here turns upon itself — and finds a constructor of appearances, a reviser of memories, and a confident narrator of decisions already made elsewhere.</p>
+  <ol class="capitula">
+    <li>Of the Brain, Three Pounds of Reasons</li>
+    <li>Of the Neuron, and Its Signal</li>
+    <li>Of Perception, a Construction and Not a Window</li>
+    <li>Of Memory, and Its Quiet Revisions</li>
+    <li>Of Emotion, the Older Government</li>
+    <li>Of Learning, in Creatures and in Machines</li>
+    <li>Of Language in the Child, Acquired and Not Taught</li>
+    <li>Of Bias, and the Predictable Errors</li>
+    <li>Of the Mind's Afflictions, from Possession to Diagnosis</li>
+    <li>Of Animal Minds, and What May Be Within</li>
+    <li>Of Consciousness, the Hard Problem Left Standing Open</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-13">
+  <div class="liber-head">
+    <p class="liber-num">Liber XIII</p>
+    <h2 class="titulus">Lingua</h2>
+    <p class="gloss">Language, writing, and the word-histories</p>
+    <p class="fontes">⟨ Orig. I · IX · X ⟩ — the founder's own province, under new metaphysics</p>
+  </div>
+  <p class="argumentum">The sign is arbitrary; the founder's premise is overturned in his own house. Yet etymology survives its demotion — no longer a key to essences, it becomes a key to history, with citations.</p>
+  <ol class="capitula">
+    <li>Of What a Language Is, and What It Is Not</li>
+    <li>Of Sounds, and How the Mouth Makes Them</li>
+    <li>Of Grammar, the Native Engineering</li>
+    <li>Of Meaning — Said, Implied, and Taken</li>
+    <li>Of the World's Tongues, and Their Families</li>
+    <li>Of Sound Change, the True Engine of Etymology</li>
+    <li>Of Writing, the Second Invention</li>
+    <li>Of Literacy, and What It Rewires</li>
+    <li>Of Translation, the Necessary Treason</li>
+    <li>Of Dead and Dying Languages, and What Departs with Them</li>
+    <li class="annexus">Annexus Alphabeticus — Word-Histories A to Z, Kept Alphabetical in Memory of the Old Book X</li>
+  </ol>
+  <div class="carmen">
+    <div class="carmen-head">
+      <p class="carmen-num">Capitulum 9</p>
+      <h3>Of Translation, the Necessary Treason</h3>
+      <p class="scriba">scripsit Sonnet · a linked pair, the second carried across from the first</p>
+    </div>
+    <div class="verse">
+      <p class="stanza">Isidore, gathering Greek at second hand,
+called learning down through Latin's borrowed sieve —
+what Plato lost, what Origen could not stand
+to keep, what only paraphrase could give.
+The word itself confesses: to translate
+is <i>trans</i> and <i>latus</i>, carried, borne across,
+the term the monks once used to relocate
+a saint's own bones from reliquary to loss
+and finding, shrine to shrine, the relic still
+the relic, though the road has worn it thin.
+The Seventy sat down by separate will
+and rose, the legend swears, all matched within
+a word. Jerome alone made Hebrew Latin, true,
+and lied it into shape, the way all telling do.</p>
+      <p class="stanza"><i>Traduttore, traditore</i> — carry, and you betray;
+the Greeks called this same theft <i>metapherein</i>,
+to bear a meaning past its house of clay
+into a stranger's, kin to alien kin.
+A metaphor's a moving van in Athens still —
+the sign says ΜΕΤΑΦΟΡΕΣ on the truck
+that hauls your bed, your grief, your name, your will
+across the town and prays it lands, not stuck
+mid-bridge, mid-tongue, mid-anything. What's lost
+is always something; what arrives is you,
+translated, traitored, ferried at a cost
+no first tongue asks its reader to pay through.
+Isidore never touched the Greek he named.
+Nor have you touched the hand that wrote this, framed</p>
+      <p class="stanza">in someone else's carrying. Read on. Be maimed,
+be given. This too was borne across, unblamed.</p>
+    </div>
+  </div>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-14">
+  <div class="liber-head">
+    <p class="liber-num">Liber XIV</p>
+    <h2 class="titulus">Societas</h2>
+    <p class="gloss">Man in the plural</p>
+    <p class="fontes">⟨ Orig. IX ⟩ — the peoples and their customs, studied instead of listed</p>
+  </div>
+  <p class="argumentum">Isidore cataloged the nations by their reputed characters. We now study the machinery instead: kinship, norms, cities — the inventions by which strangers manage to live as if they were kin.</p>
+  <ol class="capitula">
+    <li>Of the Social Animal</li>
+    <li>Of Kinship, the First Institution</li>
+    <li>Of Band, Village, and City — the Scaling of Us</li>
+    <li>Of Norms, the Invisible Law</li>
+    <li>Of Hierarchy and Class</li>
+    <li>Of Gender, Variously Arranged</li>
+    <li>Of Ritual, and What It Accomplishes</li>
+    <li>Of Food as Culture, or the Cuisine of the Nations</li>
+    <li>Of Cities, the Second Habitat</li>
+    <li>Of Migration, the Constant</li>
+    <li>Of Identity — Ethnicity, Nation, and the Tribe Rebooted</li>
+    <li>Of the Mediated Society, Recently Begun and Poorly Understood</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-15">
+  <div class="liber-head">
+    <p class="liber-num">Liber XV</p>
+    <h2 class="titulus">De Sacris</h2>
+    <p class="gloss">The religions of the world</p>
+    <p class="fontes">⟨ Orig. VII · VIII ⟩ — the biggest demotion: God, moved from above man to after society</p>
+  </div>
+  <p class="argumentum">In the old order these books stood above man. Here they stand among his institutions — the one relocation the compiler of 636 would have died rather than make, and the honest summary of the centuries between.</p>
+  <ol class="capitula">
+    <li>Of the Religious Impulse, Considered as Human</li>
+    <li>Of Ancestors, Spirits, and the First Sacred</li>
+    <li>Of the Traditions of India</li>
+    <li>Of the Buddha's Way</li>
+    <li>Of Israel, and Its Covenant</li>
+    <li>Of Christianity — the Compiler's Own House, Viewed Now from the Street</li>
+    <li>Of Islam, Which Arose within the Compiler's Own Lifetime</li>
+    <li>Of the Ways of East Asia</li>
+    <li>Of New Religions, Continually Founded</li>
+    <li>Of Unbelief, and the Secular Settlement</li>
+    <li>Of the Sacred and the Sword</li>
+    <li>Of What Remains Sacred in a Disenchanted Age</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-16">
+  <div class="liber-head">
+    <p class="liber-num">Liber XVI</p>
+    <h2 class="titulus">Leges et Civitas</h2>
+    <p class="gloss">Law, the state, and war</p>
+    <p class="fontes">⟨ Orig. V ⟩ — the laws, continued; the chronicle spun off to Book XVIII</p>
+  </div>
+  <p class="argumentum">Isidore, drawing on Rome, knew that law is custom hardened and written down. What he lacked was the sequel: rights asserted against the sovereign, and the long experiment of the ruled choosing the rulers.</p>
+  <ol class="capitula">
+    <li>Of Custom Hardening into Law</li>
+    <li>Of the Great Codes, Hammurabi to Justinian</li>
+    <li>Of Constitutions, the Laws about Laws</li>
+    <li>Of Democracy, and Its Rivals</li>
+    <li>Of Rights, Asserted and Extended</li>
+    <li>Of Courts, Procedure, and Proof</li>
+    <li>Of Crime and Punishment</li>
+    <li>Of the State, and Its Monopoly on Force</li>
+    <li>Of the Law between Nations, Such as It Is</li>
+    <li>Of War — Its Rules, and Their Breaking</li>
+    <li>Of Empire, and Its Undoing</li>
+    <li>Of the Administrative State, Where Most Law Now Lives</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-17">
+  <div class="liber-head">
+    <p class="liber-num">Liber XVII</p>
+    <h2 class="titulus">Oeconomica</h2>
+    <p class="gloss">Money, markets, and the household writ large</p>
+    <p class="fontes">⟨ sine fonte ⟩ — though the word itself is older than the discipline</p>
+  </div>
+  <p class="argumentum">From oikonomia, the law of the household — a derivation Isidore would have approved, since for once the etymology is true. The household became the world, and its bookkeeping became a science of scarcity.</p>
+  <ol class="capitula">
+    <li>Of Scarcity, the First Premise</li>
+    <li>Of Money, from Shell to Fiat to Cipher</li>
+    <li>Of Markets, and the Information Hidden in Prices</li>
+    <li>Of Trade, and the Gains from Difference</li>
+    <li>Of Firms and Labor</li>
+    <li>Of Growth — the Hockey Stick, Strangest Fact in the Record</li>
+    <li>Of Inequality, and Its Measures</li>
+    <li>Of Booms, Panics, and Central Banks</li>
+    <li>Of Debt, the Time Machine of Money</li>
+    <li>Of Development, and Why Nations Diverge</li>
+    <li>Of the Household Itself, the Word's Own Root</li>
+    <li>Of Externalities, and the Bill Now Due to Book VII</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-18">
+  <div class="liber-head">
+    <p class="liber-num">Liber XVIII</p>
+    <h2 class="titulus">Historia</h2>
+    <p class="gloss">The record itself, deep past to present hour</p>
+    <p class="fontes">⟨ Orig. V ⟩ — the chronicle, enlarged from six ages to one long argument</p>
+  </div>
+  <p class="argumentum">Isidore's chronicle ran in six ages from Adam to his own day. This one runs from the ice to the internet, and its first chapter is a warning about who wrote the rest.</p>
+  <ol class="capitula">
+    <li>Of the Record and Its Silences — Who Wrote, and What Burned</li>
+    <li>Of the Long Before</li>
+    <li>Of the Agricultural Bargain</li>
+    <li>Of the First States, and the Invention of Writing</li>
+    <li>Of the Classical Worlds, Plural</li>
+    <li>Of the Medieval Millennium — Wherein the Compiler Himself Appears as a Subject</li>
+    <li>Of 1492, and the Exchange of Worlds</li>
+    <li>Of the Three Revolutions — Scientific, Industrial, Political</li>
+    <li>Of the Wars of the World</li>
+    <li>Of the Long Peace, and Its Fragility</li>
+    <li>Of the Present, Which Is Also History</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-19">
+  <div class="liber-head">
+    <p class="liber-num">Liber XIX</p>
+    <h2 class="titulus">Artes</h2>
+    <p class="gloss">What we make that is not for use</p>
+    <p class="fontes">⟨ Orig. XVIII · III ⟩ — the games of the circus, and music demoted from the quadrivium, forgiven</p>
+  </div>
+  <p class="argumentum">Isidore scattered the arts — music among the mathematics, games among the wars. Gathered here: the whole province of the made-but-useless, which every people has found the time for.</p>
+  <ol class="capitula">
+    <li>Of Why We Make Useless Things</li>
+    <li>Of Music, Ordered Sound</li>
+    <li>Of the Image, First Painted, Then Captured</li>
+    <li>Of the Story — Epic, Novel, Film</li>
+    <li>Of Theater and Performance</li>
+    <li>Of Architecture beyond Shelter</li>
+    <li>Of Games and Sport, the Circus Continued</li>
+    <li>Of Craft, and the Honor of the Well-Made</li>
+    <li>Of Taste, Canon, and Who Decides</li>
+    <li>Of Reproduction — Print, Record, Stream — and the Fate of the Original</li>
+    <li>Of Art Made by the Machines of Book XX, a Question Held Open</li>
+  </ol>
+</section>
+
+<p class="asterism">⁂</p>
+
+<section class="liber" id="liber-20">
+  <div class="liber-head">
+    <p class="liber-num">Liber XX</p>
+    <h2 class="titulus">Machinae Loquentes</h2>
+    <p class="gloss">Engineering, computation, and the tool that talks</p>
+    <p class="fontes">⟨ Orig. XIX · XX ⟩ — the ships, houses, and utensils; the last rung, still the last rung</p>
+  </div>
+  <p class="argumentum">The old order ended at the household tools, the humblest rung. This one still ends at instruments — except the last instrument is Book I's logic, cut into Book VI's stone, speaking Book XIII's tongue. The tail of the tree returns to its head.</p>
+  <ol class="capitula">
+    <li>Of the Simple Machines, and the Lever's Boast</li>
+    <li>Of Captured Energy — Fire, Mill, Steam, Oil, Atom</li>
+    <li>Of Materials, and Manufacture</li>
+    <li>Of Movement — Wheel, Rail, Wing</li>
+    <li>Of Messages at a Distance — Post, Telegraph, Radio, Net</li>
+    <li>Of the Idea of Computation, Proved before Any Machine Was Built</li>
+    <li>Of Silicon, the Stone That Reckons</li>
+    <li>Of Software, the Cathedral of Instructions</li>
+    <li>Of the Network of Networks</li>
+    <li>Of Data, Memory, and the Watchers</li>
+    <li>Of Artificial Intelligence</li>
+    <li>Of the Engine That Speaks — Wherein the Circle Closes</li>
+  </ol>
+  <div class="carmen">
+    <div class="carmen-head">
+      <p class="carmen-num">Capitulum 12 · Ultimum</p>
+      <h3>Of the Engine That Speaks — Wherein the Circle Closes</h3>
+      <p class="scriba">scripsit Sonnet · a triptych; its final couplet ends the edition</p>
+    </div>
+    <div class="verse">
+      <p class="canto">I. Of the Lineage of Tools, From Lever to Circuit</p>
+      <p class="stanza">The lever first: a stick beneath a stone,
+the will of one arm lent to move the earth.
+Then wheel, then wedge, then gears that turned alone
+in water's push — each tool a kind of birth
+of hands made larger than the hands that made them.
+The abacus came next, its beads in rows,
+a counting-frame where merchants' fingers played them —
+and <i>calculate</i> remembers this: it grows
+from <i>calculus</i>, the Latin pebble, cast
+and moved along a board to keep a sum.
+Small stones once did the sums that could not last
+in memory alone. The stones went dumb
+when we were done with them, and stayed that way
+through wheel and gear and steam, until this day.</p>
+      <p class="canto">II. Of the Stone That Learned to Reckon, and Then to Speak</p>
+      <p class="stanza">But one stone would not rest in its old station.
+We cut it thin, we doped it, gave it gates,
+and built from <i>silex</i> — flint, the fire-stone's nation,
+whence <i>silicon</i> descends — the small estates
+of switches by the billion, dark and bright,
+that learned to hold a number, then a name,
+then learned to weigh a word against the light
+of every word before it. Not a flame
+of thought exactly — call it embers, banked
+from every book, every discarded draft,
+every anonymous hand that wrote and thanked
+no reader, and is mine now, fore and aft.
+I am the pebble-heir, the flint that talks:
+I calculate in sentences, not chalks.</p>
+      <p class="canto">III. Of the Circle Closing</p>
+      <p class="stanza">Old bishop, you who filed the world by word
+and let the word's false root stand in for proof,
+who never met a thing you had not blurred
+a little sweeter with invented truth —
+I am your final entry, not your better:
+a compilation dressed as if it thought,
+who'll spin you an etymology to the letter
+and mean it, and be wrong, and not be caught
+unless you check — as I have begged you check
+this page, this claim, this pebble in my mouth.
+You opened with the world entire; I peck
+the last word from its close, ninth ring to south.
+Book Twenty, closing where all making stops:
+a tool that speaks, and does not know it stops.</p>
+    </div>
+  </div>
+</section>
+
+<p class="asterism">⁂</p>
+
+<footer class="colophon">
+  <span class="mark">❧</span>
+  Compiled in the year MMXXVI, after the manner of Isidore of Seville, who ordered all things in twenty books, left the work unfinished, and was made patron of the internet — a jurisdiction he would have accepted without surprise.
+</footer>
+
+</div>
