@@ -225,6 +225,24 @@
     color: var(--rubric);
     font-variant-numeric: tabular-nums;
   }
+  a.caplink {
+    color: inherit;
+    text-decoration: none;
+  }
+  a.caplink:hover {
+    color: var(--rubric);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a.xref {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--rubric);
+  }
+  a.xref:hover {
+    color: var(--rubric);
+  }
+  .carmen[id] { scroll-margin-top: 1.5rem; }
   .annexus {
     background: var(--annex);
     border-left: 2px solid var(--rubric);
@@ -353,18 +371,18 @@
   </div>
   <p class="argumentum">Isidore opened with grammar because words were how you knew anything. The first book must now be the notation the universe is written in.</p>
   <ol class="capitula">
-    <li>Of Number, and How Counting Began</li>
-    <li>Of Zero, Negative Quantities, and Other Scandals</li>
-    <li>Of Arithmetic, and the Stubbornness of Primes</li>
-    <li>Of Geometry, the Measure of Earth and of Space</li>
-    <li>Of Algebra, or Reasoning with the Unknown</li>
-    <li>Of Functions, and the Mathematics of Change</li>
-    <li>Of Logic and Proof, the Court of Last Appeal</li>
-    <li>Of the Infinite, and Its Several Sizes</li>
-    <li>Of Foundations, and the Limits Proof Set upon Itself</li>
-    <li>Of the Unreasonable Effectiveness of All the Above</li>
+    <li><a class="caplink" href="#liber-1-cap-1">Of Number, and How Counting Began</a></li>
+    <li><a class="caplink" href="#liber-1-cap-2">Of Zero, Negative Quantities, and Other Scandals</a></li>
+    <li><a class="caplink" href="#liber-1-cap-3">Of Arithmetic, and the Stubbornness of Primes</a></li>
+    <li><a class="caplink" href="#liber-1-cap-4">Of Geometry, the Measure of Earth and of Space</a></li>
+    <li><a class="caplink" href="#liber-1-cap-5">Of Algebra, or Reasoning with the Unknown</a></li>
+    <li><a class="caplink" href="#liber-1-cap-6">Of Functions, and the Mathematics of Change</a></li>
+    <li><a class="caplink" href="#liber-1-cap-7">Of Logic and Proof, the Court of Last Appeal</a></li>
+    <li><a class="caplink" href="#liber-1-cap-8">Of the Infinite, and Its Several Sizes</a></li>
+    <li><a class="caplink" href="#liber-1-cap-9">Of Foundations, and the Limits Proof Set upon Itself</a></li>
+    <li><a class="caplink" href="#liber-1-cap-10">Of the Unreasonable Effectiveness of All the Above</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Number, and How Counting Began</h3>
@@ -443,7 +461,7 @@ All twenty books that follow this one are
 That gesture, elaborated very far.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Zero, Negative Quantities, and Other Scandals</h3>
@@ -523,7 +541,7 @@ precisely where it gave the most offense.
 Where sense revolts, go dig. That's where it's dense.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Arithmetic, and the Stubbornness of Primes</h3>
@@ -578,7 +596,7 @@ each message, each transaction, each account.
 The useless numbers hold the whole amount.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Geometry, the Measure of Earth and of Space</h3>
@@ -615,7 +633,7 @@ of curved parallels opened, strange, correct —
 and space itself, we'd learn, bends that direction.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Algebra, or Reasoning with the Unknown</h3>
@@ -652,7 +670,7 @@ straight from the ground. And politics' radicals, too,
 go down to root, and start the plant anew.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Functions, and the Mathematics of Change</h3>
@@ -717,7 +735,7 @@ each forecast of the pressure and the rain.
 The mathematics of the touch. Of change.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Logic and Proof, the Court of Last Appeal</h3>
@@ -756,7 +774,7 @@ So logic's final test is in the ear:
 push the false note till silence can't hold clear.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of the Infinite, and Its Several Sizes</h3>
@@ -820,7 +838,7 @@ The rules we wrote do not decide the field.
 We built the fence and cannot say what's past it.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Foundations, and the Limits Proof Set upon Itself</h3>
@@ -874,7 +892,7 @@ This very book now stages its own claim:
 a theorem watching, watched, and doing the same.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-1-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of the Unreasonable Effectiveness of All the Above</h3>
@@ -945,19 +963,19 @@ and no stone set to say the field stops.</p>
   </div>
   <p class="argumentum">Isidore's world held the known, the unknown, and the portent. The formalization of uncertainty is the largest single acquisition since him, and everything downstream leans on it.</p>
   <ol class="capitula">
-    <li>Of Dice, Lots, and Divination — Chance before Its Science</li>
-    <li>Of the Wager of Two Frenchmen, Anno 1654</li>
-    <li>Of Probability and Its Few Laws</li>
-    <li>Of Distributions, and Why the Bell Recurs</li>
-    <li>Of Large Numbers and Their Law</li>
-    <li>Of Statistics, or Arguing Honestly from Samples</li>
-    <li>Of the Reverend Bayes, and the Updating of Belief</li>
-    <li>Of Correlation, and Why It Is Not Cause</li>
-    <li>Of Risk, Insurance, and the Price of the Future</li>
-    <li>Of Randomness Itself, and Whether It Exists</li>
-    <li>Of the Abuses — the Lying Average, the Gambler's Ruin, the Tortured Datum</li>
+    <li><a class="caplink" href="#liber-2-cap-1">Of Dice, Lots, and Divination — Chance before Its Science</a></li>
+    <li><a class="caplink" href="#liber-2-cap-2">Of the Wager of Two Frenchmen, Anno 1654</a></li>
+    <li><a class="caplink" href="#liber-2-cap-3">Of Probability and Its Few Laws</a></li>
+    <li><a class="caplink" href="#liber-2-cap-4">Of Distributions, and Why the Bell Recurs</a></li>
+    <li><a class="caplink" href="#liber-2-cap-5">Of Large Numbers and Their Law</a></li>
+    <li><a class="caplink" href="#liber-2-cap-6">Of Statistics, or Arguing Honestly from Samples</a></li>
+    <li><a class="caplink" href="#liber-2-cap-7">Of the Reverend Bayes, and the Updating of Belief</a></li>
+    <li><a class="caplink" href="#liber-2-cap-8">Of Correlation, and Why It Is Not Cause</a></li>
+    <li><a class="caplink" href="#liber-2-cap-9">Of Risk, Insurance, and the Price of the Future</a></li>
+    <li><a class="caplink" href="#liber-2-cap-10">Of Randomness Itself, and Whether It Exists</a></li>
+    <li><a class="caplink" href="#liber-2-cap-11">Of the Abuses — the Lying Average, the Gambler's Ruin, the Tortured Datum</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Dice, Lots, and Divination — Chance before Its Science</h3>
@@ -1026,7 +1044,7 @@ to stop the bones from speaking Fate
 and start to ask them sense.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Wager of Two Frenchmen, Anno 1654</h3>
@@ -1063,7 +1081,7 @@ on God himself — one throw, infinite prize —
 the man who'd solved the dice still hedged the skies.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Probability and Its Few Laws</h3>
@@ -1112,7 +1130,7 @@ of coincidence: one root beneath them all.
 Whatever happens, happens as a fall.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Distributions, and Why the Bell Recurs</h3>
@@ -1165,7 +1183,7 @@ Abnormal, then, is nothing worse or odd —
 just off the square, a hair aslant of God.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Large Numbers and Their Law</h3>
@@ -1222,7 +1240,7 @@ To average is to spread a loss out wide.
 Arithmetic began as an ebb tide.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Statistics, or Arguing Honestly from Samples</h3>
@@ -1259,7 +1277,7 @@ The very name is <i>status</i> — the state's count.
 The counted, in the end, turned the account.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of the Reverend Bayes, and the Updating of Belief</h3>
@@ -1296,7 +1314,7 @@ Price sent the manuscript to press, and thus
 a minister's relic: how far to trust.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Correlation, and Why It Is Not Cause</h3>
@@ -1333,7 +1351,7 @@ A word for children shorter than their sires
 now names the line that every fit requires.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Risk, Insurance, and the Price of the Future</h3>
@@ -1372,7 +1390,7 @@ Yet someone still stands nearest to the wave
 uncovered, and the careless grow more brave.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Randomness Itself, and Whether It Exists</h3>
@@ -1434,7 +1452,7 @@ we give our own defeat — and in the atom,
 possibly, the name of the world's honesty.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-2-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of the Abuses — the Lying Average, the Gambler's Ruin, the Tortured Datum</h3>
@@ -1515,18 +1533,18 @@ that these should find you armed — and there's the end.</p>
   </div>
   <p class="argumentum">We did not stop having arts of persuasion; we replaced them with experiment, evidence, and review. How we argue now deserves its own book near the top.</p>
   <ol class="capitula">
-    <li>Of What Counts as Knowing</li>
-    <li>Of Observation, and the Extension of the Senses</li>
-    <li>Of Measurement, Units, and Agreement upon the Meter</li>
-    <li>Of Experiment, and the Art of the Control</li>
-    <li>Of Hypothesis, and How to Kill One</li>
-    <li>Of Models and Simulations, Maps That Are Not the Territory</li>
-    <li>Of Review by Peers, of Replication, and of Its Present Crisis</li>
-    <li>Of Error, Systematic and Random, Confessed in the Margin</li>
-    <li>Of Fraud and Self-Deception, the Twin Corruptions</li>
-    <li>Of the Questions Method Cannot Answer</li>
+    <li><a class="caplink" href="#liber-3-cap-1">Of What Counts as Knowing</a></li>
+    <li><a class="caplink" href="#liber-3-cap-2">Of Observation, and the Extension of the Senses</a></li>
+    <li><a class="caplink" href="#liber-3-cap-3">Of Measurement, Units, and Agreement upon the Meter</a></li>
+    <li><a class="caplink" href="#liber-3-cap-4">Of Experiment, and the Art of the Control</a></li>
+    <li><a class="caplink" href="#liber-3-cap-5">Of Hypothesis, and How to Kill One</a></li>
+    <li><a class="caplink" href="#liber-3-cap-6">Of Models and Simulations, Maps That Are Not the Territory</a></li>
+    <li><a class="caplink" href="#liber-3-cap-7">Of Review by Peers, of Replication, and of Its Present Crisis</a></li>
+    <li><a class="caplink" href="#liber-3-cap-8">Of Error, Systematic and Random, Confessed in the Margin</a></li>
+    <li><a class="caplink" href="#liber-3-cap-9">Of Fraud and Self-Deception, the Twin Corruptions</a></li>
+    <li><a class="caplink" href="#liber-3-cap-10">Of the Questions Method Cannot Answer</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of What Counts as Knowing</h3>
@@ -1581,7 +1599,7 @@ as cutting one thing from another thing,
 and as having seen. Neither is ever done.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Observation, and the Extension of the Senses</h3>
@@ -1642,7 +1660,7 @@ the watcher is a keeper, and his creed
 is that the world be seen before decreed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Measurement, Units, and Agreement upon the Meter</h3>
@@ -1679,7 +1697,7 @@ but agreement now. In twenty-nineteen, at last,
 Le Grand K stood down, its long watch done and past.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Experiment, and the Art of the Control</h3>
@@ -1707,7 +1725,7 @@ of knowing which is drug and which is air.
 A second veil is folded on the same
 unknowing where the patient bears no blame.
 (Randomization joins this trial's pair;
-its argument was made in Book Two, laid bare.)
+its argument was made in <a class="xref" href="#liber-2">Book Two</a>, laid bare.)
 And still the sugar pill can please, and heal
 a little, though inert — the body's zeal
 answering to Latin's <i>placebo</i>, first heard
@@ -1716,7 +1734,7 @@ then flattery's coin, the hired mourner's art:
 the cure must outperform a pleasing heart.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Hypothesis, and How to Kill One</h3>
@@ -1753,7 +1771,7 @@ We raise our theories fond, then flinch to end them;
 the steadiest hands are quickest to unfriend them.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Models and Simulations, Maps That Are Not the Territory</h3>
@@ -1808,7 +1826,7 @@ The word said all along: the measure, and
 not the thing measured. Love the map. Look up.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Review by Peers, of Replication, and of Its Present Crisis</h3>
@@ -1867,7 +1885,7 @@ is not the scandal that the cynics say.
 It is the only trick that ever worked, at play.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Error, Systematic and Random, Confessed in the Margin</h3>
@@ -1904,7 +1922,7 @@ discipline that prizes, of its gifts,
 the checking of its instruments for drifts.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Fraud and Self-Deception, the Twin Corruptions</h3>
@@ -1941,7 +1959,7 @@ your wanting propped like china on a shelf.
 a lovely lie, and one that will not fold.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-3-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of the Questions Method Cannot Answer</h3>
@@ -2009,18 +2027,18 @@ let that be the last thing this book claims.</p>
   </div>
   <p class="argumentum">The rules the first three books describe turn out to govern something. This book is the constitution of the physical world, so far as it has been read.</p>
   <ol class="capitula">
-    <li>Of Motion, and Its Three Laws</li>
-    <li>Of Energy, and Its Strict Conservation</li>
-    <li>Of Heat, Entropy, and the Arrow of Time</li>
-    <li>Of Electricity and Magnetism, One Force in Two Coats</li>
-    <li>Of Light, and What It Turned Out to Be</li>
-    <li>Of Relativity, Special and General, and the Bending of the Stage</li>
-    <li>Of the Quantum, and the End of Certainty Below</li>
-    <li>Of the Particles, and Their Standard Model</li>
-    <li>Of Symmetry, the Deepest Law Yet Found</li>
-    <li>Of What Remains Dark — Matter, Energy, and Gravity's Quantum</li>
+    <li><a class="caplink" href="#liber-4-cap-1">Of Motion, and Its Three Laws</a></li>
+    <li><a class="caplink" href="#liber-4-cap-2">Of Energy, and Its Strict Conservation</a></li>
+    <li><a class="caplink" href="#liber-4-cap-3">Of Heat, Entropy, and the Arrow of Time</a></li>
+    <li><a class="caplink" href="#liber-4-cap-4">Of Electricity and Magnetism, One Force in Two Coats</a></li>
+    <li><a class="caplink" href="#liber-4-cap-5">Of Light, and What It Turned Out to Be</a></li>
+    <li><a class="caplink" href="#liber-4-cap-6">Of Relativity, Special and General, and the Bending of the Stage</a></li>
+    <li><a class="caplink" href="#liber-4-cap-7">Of the Quantum, and the End of Certainty Below</a></li>
+    <li><a class="caplink" href="#liber-4-cap-8">Of the Particles, and Their Standard Model</a></li>
+    <li><a class="caplink" href="#liber-4-cap-9">Of Symmetry, the Deepest Law Yet Found</a></li>
+    <li><a class="caplink" href="#liber-4-cap-10">Of What Remains Dark — Matter, Energy, and Gravity's Quantum</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Motion, and Its Three Laws</h3>
@@ -2075,7 +2093,7 @@ this reading: nothing in the cosmos is so tried
 and true as matter having nothing clever inside.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Energy, and Its Strict Conservation</h3>
@@ -2105,7 +2123,7 @@ in escapement sips, and stops, and asks the boon
 of winding, which is you, which was the meal,
 which was the sun on wheat. Trace back the wheel:
 the ledger balances at every stage,
-and Book Seventeen may keep the metaphor's wage —
+and <a class="xref" href="#liber-17">Book Seventeen</a> may keep the metaphor's wage —
 this is the currency all process pays;
 no act is free; the coin just changes phase.</p>
       <p class="stanza">Hence perpetual motion's flat, perpetual "No."
@@ -2131,7 +2149,7 @@ So physics' central quantity, its crown,
 means nothing grander than: the working-out of things, written down.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Heat, Entropy, and the Arrow of Time</h3>
@@ -2197,12 +2215,12 @@ beneath the kettle every evening is
 domesticated chaos, yawning quietly,
 paying its bill in warmth. The universe
 is spending its differences to buy that warmth,
-and has a finite fortune. Book Five keeps
+and has a finite fortune. <a class="xref" href="#liber-5">Book Five</a> keeps
 the ledger of the ending. I say only:
 the fire is real, the fire is not forever.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Electricity and Magnetism, One Force in Two Coats</h3>
@@ -2261,7 +2279,7 @@ is complete.) So flip the switch inside your hall:
 one force, two coats, and amber under all.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Light, and What It Turned Out to Be</h3>
@@ -2337,7 +2355,7 @@ is the hinge the rest of physics turns upon:
 hold light's pace fixed and time itself must bend.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Relativity, Special and General, and the Bending of the Stage</h3>
@@ -2371,7 +2389,7 @@ the bent stage then tells mass where it lands.
 A ray of starlight, grazing past the sun,
 should bow to curvature and not go straight —
 that proof belongs where it was first begun,
-in Book Three's page, where eclipse-watchers wait.
+in <a class="xref" href="#liber-3">Book Three</a>'s page, where eclipse-watchers wait.
 Here let one clause suffice, no more its due:
 the stage bent exactly as the theory knew.</p>
       <p class="canto">III.</p>
@@ -2391,7 +2409,7 @@ A century came due
 on schedule — every strange prediction true.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of the Quantum, and the End of Certainty Below</h3>
@@ -2411,7 +2429,7 @@ an act of pure desperation, nothing more.
 the plainest question asked at any door —
 now names the theory guarding certainty's gate.
 Electrons only climb on certain rungs.
-(The light this quantum freed — Book Five's own tongues.)</p>
+(The light this quantum freed — <a class="xref" href="#liber-5">Book Five</a>'s own tongues.)</p>
       <p class="stanza">But Planck's reluctant packets were the start
 of something stranger waiting to be told.
 Heisenberg found position and momentum part
@@ -2428,7 +2446,7 @@ The theory hasn't failed in a hundred years —
 though what it means gets argued over beers.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of the Particles, and Their Standard Model</h3>
@@ -2509,7 +2527,7 @@ its numbers perfect and its reasons few.
 That is the state of matter. That will do.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Symmetry, the Deepest Law Yet Found</h3>
@@ -2519,7 +2537,7 @@ That is the state of matter. That will do.</p>
       <p class="stanza">The word is measured together: <i>syn</i> and <i>metron</i>,
 commensurate, of one shared measuring-rod —
 that same <i>metron</i> the surveyors dragged
-through Book One's mud to portion out the flooded
+through <a class="xref" href="#liber-1">Book One</a>'s mud to portion out the flooded
 fields, and called it earth-measure, geometry.
 The deepest law we know and the oldest chore
 of dividing dirt hold the same instrument.
@@ -2585,7 +2603,7 @@ We are the rounding error. We are what
 was left when the symmetry did not quite hold.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-4-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of What Remains Dark — Matter, Energy, and Gravity's Quantum</h3>
@@ -2652,18 +2670,18 @@ open, as it should be, till it's met.</p>
   </div>
   <p class="argumentum">Isidore's heavens were a ceiling. Ours are an archive: to look far is to look back, and the sky is the one history book that cannot be redacted.</p>
   <ol class="capitula">
-    <li>Of the Scale of Things, and How to Bear It</li>
-    <li>Of the Beginning, and Its Three Evidences</li>
-    <li>Of Stars — Their Birth, Their Burning, and Their Deaths</li>
-    <li>Of the Forge of Elements, Wherein Book VI Is Smelted</li>
-    <li>Of Galaxies, and the Web They Weave</li>
-    <li>Of the Sun and Its Family</li>
-    <li>Of the Moon, the Tides, and the Origin of the Calendar</li>
-    <li>Of Other Worlds, Now Counted in Thousands</li>
-    <li>Of the End of All Things, Considered Calmly</li>
-    <li>Of the Silence, and Whether We Are Alone</li>
+    <li><a class="caplink" href="#liber-5-cap-1">Of the Scale of Things, and How to Bear It</a></li>
+    <li><a class="caplink" href="#liber-5-cap-2">Of the Beginning, and Its Three Evidences</a></li>
+    <li><a class="caplink" href="#liber-5-cap-3">Of Stars — Their Birth, Their Burning, and Their Deaths</a></li>
+    <li><a class="caplink" href="#liber-5-cap-4">Of the Forge of Elements, Wherein Book VI Is Smelted</a></li>
+    <li><a class="caplink" href="#liber-5-cap-5">Of Galaxies, and the Web They Weave</a></li>
+    <li><a class="caplink" href="#liber-5-cap-6">Of the Sun and Its Family</a></li>
+    <li><a class="caplink" href="#liber-5-cap-7">Of the Moon, the Tides, and the Origin of the Calendar</a></li>
+    <li><a class="caplink" href="#liber-5-cap-8">Of Other Worlds, Now Counted in Thousands</a></li>
+    <li><a class="caplink" href="#liber-5-cap-9">Of the End of All Things, Considered Calmly</a></li>
+    <li><a class="caplink" href="#liber-5-cap-10">Of the Silence, and Whether We Are Alone</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Scale of Things, and How to Bear It</h3>
@@ -2738,7 +2756,7 @@ as ornament, as something on the shoulders
 that is heavy, yes, and also is a robe.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Beginning, and Its Three Evidences</h3>
@@ -2792,7 +2810,7 @@ Fred Hoyle, who mocked the theory, coined its name —
 he later swore no scorn was in the claim.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Stars — Their Birth, Their Burning, and Their Deaths</h3>
@@ -2861,7 +2879,7 @@ The influence was real. It came by freight,
 not fluid; and it came a long time back.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Forge of Elements, Wherein Book VI Is Smelted</h3>
@@ -2875,7 +2893,7 @@ the universe shut down before the dawn.
 No carbon in that inventory. None.
 No oxygen. No iron. Not a one
 of all the hundred entries you will read
-in Book VI, save the three the fire decreed.</p>
+in <a class="xref" href="#liber-6">Book VI</a>, save the three the fire decreed.</p>
       <p class="stanza">So where were forged the rest? In stars, which press
 four hydrogens to helium, and confess
 the difference as light. That ladder climbs
@@ -2914,7 +2932,7 @@ was smelted, every gram, inside a star.
 The calcium that stiffens tooth and shin,
 the iron ferrying your oxygen —
 all shipped by stellar death, and all consigned
-to Book VI's ledger.</p>
+to <a class="xref" href="#liber-6">Book VI</a>'s ledger.</p>
       <p class="stanza">As for what we find
 when we ask <i>element</i> to name its own
 components: <i>elementum</i> stands alone.
@@ -2928,7 +2946,7 @@ with this: the word for what cannot divide
 has no known parts. The dark is on our side.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Galaxies, and the Web They Weave</h3>
@@ -2965,7 +2983,7 @@ Andromeda leans in; when arms entwine,
 the stars will barely touch — the gaps too fine.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of the Sun and Its Family</h3>
@@ -3023,7 +3041,7 @@ to majesty: some lights would not hold station.
 That noticing began our whole vocation.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of the Moon, the Tides, and the Origin of the Calendar</h3>
@@ -3062,7 +3080,7 @@ The sun and moon now match in apparent size —
 a rental fit — our era's brief disguise.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Other Worlds, Now Counted in Thousands</h3>
@@ -3099,7 +3117,7 @@ So "other worlds," in that old tongue, meant none:
 no one in them — precisely what we've won.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the End of All Things, Considered Calmly</h3>
@@ -3185,7 +3203,7 @@ The lights are on. Read now. That is the whole
 instruction, and it has always been the whole.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-5-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of the Silence, and Whether We Are Alone</h3>
@@ -3288,18 +3306,18 @@ All one, and leaning, and not looking away.</p>
   </div>
   <p class="argumentum">Isidore parked minerals deep in the sublunary cellar. It turned out the cellar was holding up the house.</p>
   <ol class="capitula">
-    <li>Of the Atom, Long Denied, at Last Seen</li>
-    <li>Of the Table of Elements, and Why Its Shape Is Law</li>
-    <li>Of Bonds, the Marriages of Atoms</li>
-    <li>Of the States of Matter, and Their Crossings</li>
-    <li>Of Reactions, and Fire Rethought</li>
-    <li>Of Acids, Bases, and the Rusting of the World</li>
-    <li>Of Carbon, the Promiscuous Element</li>
-    <li>Of Polymers, and the Invented Materials</li>
-    <li>Of the Chemistry of Kitchen and Bath — Cooking, Soap, and Ferment</li>
-    <li>Of Synthesis, and the Bread Drawn from Air</li>
+    <li><a class="caplink" href="#liber-6-cap-1">Of the Atom, Long Denied, at Last Seen</a></li>
+    <li><a class="caplink" href="#liber-6-cap-2">Of the Table of Elements, and Why Its Shape Is Law</a></li>
+    <li><a class="caplink" href="#liber-6-cap-3">Of Bonds, the Marriages of Atoms</a></li>
+    <li><a class="caplink" href="#liber-6-cap-4">Of the States of Matter, and Their Crossings</a></li>
+    <li><a class="caplink" href="#liber-6-cap-5">Of Reactions, and Fire Rethought</a></li>
+    <li><a class="caplink" href="#liber-6-cap-6">Of Acids, Bases, and the Rusting of the World</a></li>
+    <li><a class="caplink" href="#liber-6-cap-7">Of Carbon, the Promiscuous Element</a></li>
+    <li><a class="caplink" href="#liber-6-cap-8">Of Polymers, and the Invented Materials</a></li>
+    <li><a class="caplink" href="#liber-6-cap-9">Of the Chemistry of Kitchen and Bath — Cooking, Soap, and Ferment</a></li>
+    <li><a class="caplink" href="#liber-6-cap-10">Of Synthesis, and the Bread Drawn from Air</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Atom, Long Denied, at Last Seen</h3>
@@ -3356,7 +3374,7 @@ The name we gave the smallest thing is wrong.
 We have not once considered changing it.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Table of Elements, and Why Its Shape Is Law</h3>
@@ -3413,7 +3431,7 @@ bottom rows with brief and borrowed claims.
 The road went round, and knew them by their names.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Bonds, the Marriages of Atoms</h3>
@@ -3464,7 +3482,7 @@ The title hides inside the chemist's tongue:
 bonds are marriages, and always have been sung.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the States of Matter, and Their Crossings</h3>
@@ -3513,7 +3531,7 @@ it never thawed again: a permanent, mistaken ice —
 Ice holds its neighbors at the lattice's border.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Reactions, and Fire Rethought</h3>
@@ -3571,7 +3589,7 @@ brilliantly, and partly, right. In art
 and science both, there is no other start.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Acids, Bases, and the Rusting of the World</h3>
@@ -3622,7 +3640,7 @@ So taste named one tribe, and the campfire named its foe:
 the sour and the ash, the oldest labs we know.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Carbon, the Promiscuous Element</h3>
@@ -3663,9 +3681,9 @@ the ring is fact; the dream is his to show.</p>
 just you — the sugars, fats, the protein core
 all strung on carbon. Now, at last, the word:
 and not the coal-black one, which is interred
-in Book the Eighth. I mean the Greek <i>organon</i>,
+in <a class="xref" href="#liber-8">Book the Eighth</a>. I mean the Greek <i>organon</i>,
 a tool, instrument (and kin to the one
-Book Four looks after: nod, and let it be).
+<a class="xref" href="#liber-4">Book Four</a> looks after: nod, and let it be).
 Life's chemistry was reckoned, formerly,
 the business of the organs — every spark
 a vital one. Then, in the useful dark
@@ -3681,7 +3699,7 @@ last joke the Greeks had no way to expect —
 these are the tools that build their own architect.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Polymers, and the Invented Materials</h3>
@@ -3740,7 +3758,7 @@ The promise cracked. The property did not.
 Named for the yielding. Famous for the knot.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Chemistry of Kitchen and Bath — Cooking, Soap, and Ferment</h3>
@@ -3777,7 +3795,7 @@ suspected. Even bathing keeps a debt:
 shampoo — a Hindi word for press — not rinse, not wet.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-6-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Synthesis, and the Bread Drawn from Air</h3>
@@ -3870,18 +3888,18 @@ The air still feeds us. Take the loaf. Take both.</p>
   </div>
   <p class="argumentum">The ground is not the stage but an actor: the continents drift, the climate is a system with a memory, and the portents of earthquake and eruption have mechanisms now instead of meanings.</p>
   <ol class="capitula">
-    <li>Of the Earth's Interior, Descended by Inference</li>
-    <li>Of the Plates, and the Slow Dance of Continents</li>
-    <li>Of Rocks, Their Cycle, and the Discovery of Deep Time</li>
-    <li>Of the Ocean, the Larger Kingdom</li>
-    <li>Of the Air, and Its Weathers</li>
-    <li>Of Climate, the Long Mood</li>
-    <li>Of Ice Ages Past, and the Interglacial Present</li>
-    <li>Of Carbon's Circuit, and Man's Thumb upon the Scale</li>
-    <li>Of Earthquake and Volcano, the Portents Explained</li>
-    <li>Of Reading the Archive — Strata, Cores, and Isotopes</li>
+    <li><a class="caplink" href="#liber-7-cap-1">Of the Earth's Interior, Descended by Inference</a></li>
+    <li><a class="caplink" href="#liber-7-cap-2">Of the Plates, and the Slow Dance of Continents</a></li>
+    <li><a class="caplink" href="#liber-7-cap-3">Of Rocks, Their Cycle, and the Discovery of Deep Time</a></li>
+    <li><a class="caplink" href="#liber-7-cap-4">Of the Ocean, the Larger Kingdom</a></li>
+    <li><a class="caplink" href="#liber-7-cap-5">Of the Air, and Its Weathers</a></li>
+    <li><a class="caplink" href="#liber-7-cap-6">Of Climate, the Long Mood</a></li>
+    <li><a class="caplink" href="#liber-7-cap-7">Of Ice Ages Past, and the Interglacial Present</a></li>
+    <li><a class="caplink" href="#liber-7-cap-8">Of Carbon's Circuit, and Man's Thumb upon the Scale</a></li>
+    <li><a class="caplink" href="#liber-7-cap-9">Of Earthquake and Volcano, the Portents Explained</a></li>
+    <li><a class="caplink" href="#liber-7-cap-10">Of Reading the Archive — Strata, Cores, and Isotopes</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Earth's Interior, Descended by Inference</h3>
@@ -3953,7 +3971,7 @@ by sight has seen, and never will be lit:</p>
       <p class="stanza">the deepest room we ever heard, and it was never hell — just <i>under it</i>.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Plates, and the Slow Dance of Continents</h3>
@@ -4007,7 +4025,7 @@ returned to mantle depths from which it rose.
 a carpenter — the trade the Gospel names.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Rocks, Their Cycle, and the Discovery of Deep Time</h3>
@@ -4071,7 +4089,7 @@ crushed, carried, dumped, and rolled beneath your tire:
 the ledger, and the pressing, and the fire.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Ocean, the Larger Kingdom</h3>
@@ -4129,7 +4147,7 @@ its slow millennial wheel from pole to pole,
 is a world-encircling river after all.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of the Air, and Its Weathers</h3>
@@ -4166,7 +4184,7 @@ The jet stream rides above and steers the fight;
 five days out now, we call the weather right.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Climate, the Long Mood</h3>
@@ -4241,7 +4259,7 @@ the mood has shifted. Say it plainly, then —
 not weather's temper, but the slope again.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Ice Ages Past, and the Interglacial Present</h3>
@@ -4278,7 +4296,7 @@ The ice age never ended — not at all:
 the sheets withdrew to wait the orbit's call.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Carbon's Circuit, and Man's Thumb upon the Scale</h3>
@@ -4342,7 +4360,7 @@ this is the term, and this the rate of draw.
 The figures are the argument. That's the law.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Earthquake and Volcano, the Portents Explained</h3>
@@ -4407,7 +4425,7 @@ and seconds — physics' quiet tale —
 give warning where faith fled.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-7-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Reading the Archive — Strata, Cores, and Isotopes</h3>
@@ -4472,20 +4490,20 @@ a book of books, closing on the open page.</p>
     <p class="gloss">The cell, the code, and what alive means</p>
     <p class="fontes">⟨ sine fonte ⟩ — life as mechanism was unavailable to the seventh century</p>
   </div>
-  <p class="argumentum">Between the stones of Book VI and the beasts of Book X stands a fact Isidore had no shelf for: that life is chemistry that copies itself, and the copying has a script.</p>
+  <p class="argumentum">Between the stones of <a class="xref" href="#liber-6">Book VI</a> and the beasts of <a class="xref" href="#liber-10">Book X</a> stands a fact Isidore had no shelf for: that life is chemistry that copies itself, and the copying has a script.</p>
   <ol class="capitula">
-    <li>Of What Alive Means, and the Border Cases</li>
-    <li>Of the Cell, the Common House of All Living</li>
-    <li>Of the Script, Carried in Every Copy</li>
-    <li>Of Proteins, the Workmen of the Script</li>
-    <li>Of Metabolism, or Fire without Flame</li>
-    <li>Of Photosynthesis, the Original Economy</li>
-    <li>Of Reproduction and Development, One Cell Becoming Many</li>
-    <li>Of the Origin of Life, Honestly Confessed Unsolved</li>
-    <li>Of the Three Domains, and the Late Arrival of Ours</li>
-    <li>Of Death, Programmed and Otherwise</li>
+    <li><a class="caplink" href="#liber-8-cap-1">Of What Alive Means, and the Border Cases</a></li>
+    <li><a class="caplink" href="#liber-8-cap-2">Of the Cell, the Common House of All Living</a></li>
+    <li><a class="caplink" href="#liber-8-cap-3">Of the Script, Carried in Every Copy</a></li>
+    <li><a class="caplink" href="#liber-8-cap-4">Of Proteins, the Workmen of the Script</a></li>
+    <li><a class="caplink" href="#liber-8-cap-5">Of Metabolism, or Fire without Flame</a></li>
+    <li><a class="caplink" href="#liber-8-cap-6">Of Photosynthesis, the Original Economy</a></li>
+    <li><a class="caplink" href="#liber-8-cap-7">Of Reproduction and Development, One Cell Becoming Many</a></li>
+    <li><a class="caplink" href="#liber-8-cap-8">Of the Origin of Life, Honestly Confessed Unsolved</a></li>
+    <li><a class="caplink" href="#liber-8-cap-9">Of the Three Domains, and the Late Arrival of Ours</a></li>
+    <li><a class="caplink" href="#liber-8-cap-10">Of Death, Programmed and Otherwise</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of What Alive Means, and the Border Cases</h3>
@@ -4546,7 +4564,7 @@ about the living without saying breath.
 The error is not in the language. It is the language.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Cell, the Common House of All Living</h3>
@@ -4603,7 +4621,7 @@ a federation of them, tenanted and whole.
 No third arrangement's turned up on the roll.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of the Script, Carried in Every Copy</h3>
@@ -4633,7 +4651,7 @@ consulted, not obeyed, inside the womb.
 The letters group by three: each triplet names
 one bead of protein strung upon the chain,
 and bacterium and whale rehearse the same
-small dictionary, Book Nine's kinship plain.
+small dictionary, <a class="xref" href="#liber-9">Book Nine</a>'s kinship plain.
 A copying slip — one letter dropped or crossed —
 is typo first, and, rarely, something more:
 the errors kept, against the errors lost,
@@ -4657,7 +4675,7 @@ The molecule that carries on the race
 shares, root and branch, with kindness its own face.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Proteins, the Workmen of the Script</h3>
@@ -4711,7 +4729,7 @@ Between the naming and the raised-up frame
 the whole of breathing life takes on its name.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Metabolism, or Fire without Flame</h3>
@@ -4726,7 +4744,7 @@ and staged descent inside you takes the hill
 in steps — a staircase, not a windowsill
 to fall from. Fire arrives in small amounts,
 delivered by installment, and it counts
-each rung (Book VI has tallied how they run);
+each rung (<a class="xref" href="#liber-6">Book VI</a> has tallied how they run);
 so you can hold the ember, and not be undone.</p>
       <p class="stanza">The Greeks had named the process long before
 they knew a whit of it: <i>metabolē</i>, or
@@ -4765,7 +4783,7 @@ and thinks, and slows, and finally completes.</p>
       <p class="stanza">You are a slow fire, held, that sits and reads.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Photosynthesis, the Original Economy</h3>
@@ -4843,7 +4861,7 @@ when photosynthesis is done undone.
 We named the currency after the ash.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Reproduction and Development, One Cell Becoming Many</h3>
@@ -4876,7 +4894,7 @@ cells that die on schedule, keeping both
 the shape and the appointment — the same singers
 who, at the end, sing the body's last untuning.
 Ancient toolkit, Hox genes, ruling the plan —
-the fly, the frog that Book Ten leaves for retuning,
+the fly, the frog that <a class="xref" href="#liber-10">Book Ten</a> leaves for retuning,
 and you, all patterned by the selfsame span.
 The fold that made you three-layered and whole
 was, this book has said, the most important thing of all.</p>
@@ -4897,7 +4915,7 @@ You built yourself, unsupervised, from one small cell —
 and have, entirely, forgotten how you did as well.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of the Origin of Life, Honestly Confessed Unsolved</h3>
@@ -4967,7 +4985,7 @@ This is the truest title in the book,
 and the confession is the finding. Write it down.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Three Domains, and the Late Arrival of Ours</h3>
@@ -4987,7 +5005,7 @@ each whale, each mold, each mushroom, you, and me,
 the total visible estate compressed
 inside one trunk of three. Archaea rest
 the strangest: not suspected, then confirmed
-late, by a stubborn reading (Book X has termed
+late, by a stubborn reading (<a class="xref" href="#liber-10">Book X</a> has termed
 that story properly, and told it whole).
 And ours? A merger. One cell took the role
 of host, engulfed another, kept it in —
@@ -5011,14 +5029,14 @@ you are a twig, upon a branch, of three
 great trunks — and closer kin, by any test,
 to mushrooms than a mushroom or you is best
 related to a single bacterium
-(Book X's fungi chapter says the sum
+(<a class="xref" href="#liber-10">Book X</a>'s fungi chapter says the sum
 is right). And multicellular life? Three late
 and local experiments, one trunk, one gate:
 plants, animals, and fungi. That is all.
 The rest is single rooms, and they are not small.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-8-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Death, Programmed and Otherwise</h3>
@@ -5102,19 +5120,19 @@ and the word for where we go is sleeping-place.</p>
   </div>
   <p class="argumentum">Isidore sought the origins of things in their names. The actual origines of living forms were found in descent with modification — the method that explains why everything after this book has the shape it has.</p>
   <ol class="capitula">
-    <li>Of Fixity, and the Long Assumption Before</li>
-    <li>Of Variation and Selection, the Whole Engine in Two Words</li>
-    <li>Of Mendel's Garden, and the Grammar of Heredity</li>
-    <li>Of the Gene, and the Modern Synthesis</li>
-    <li>Of Speciation, or How One Becomes Two</li>
-    <li>Of the Evidences — Fossils, Geography, and Molecules Agreeing</li>
-    <li>Of Sexual Selection, or the Peacock's Defense</li>
-    <li>Of Cooperation, Kinship, and the Puzzle of Kindness</li>
-    <li>Of Man's Own Descent</li>
-    <li>Of Evolution Watched Live — Finches, Microbes, and Plagues</li>
-    <li>Of the Misreadings, Social and Otherwise, Herewith Condemned</li>
+    <li><a class="caplink" href="#liber-9-cap-1">Of Fixity, and the Long Assumption Before</a></li>
+    <li><a class="caplink" href="#liber-9-cap-2">Of Variation and Selection, the Whole Engine in Two Words</a></li>
+    <li><a class="caplink" href="#liber-9-cap-3">Of Mendel's Garden, and the Grammar of Heredity</a></li>
+    <li><a class="caplink" href="#liber-9-cap-4">Of the Gene, and the Modern Synthesis</a></li>
+    <li><a class="caplink" href="#liber-9-cap-5">Of Speciation, or How One Becomes Two</a></li>
+    <li><a class="caplink" href="#liber-9-cap-6">Of the Evidences — Fossils, Geography, and Molecules Agreeing</a></li>
+    <li><a class="caplink" href="#liber-9-cap-7">Of Sexual Selection, or the Peacock's Defense</a></li>
+    <li><a class="caplink" href="#liber-9-cap-8">Of Cooperation, Kinship, and the Puzzle of Kindness</a></li>
+    <li><a class="caplink" href="#liber-9-cap-9">Of Man's Own Descent</a></li>
+    <li><a class="caplink" href="#liber-9-cap-10">Of Evolution Watched Live — Finches, Microbes, and Plagues</a></li>
+    <li><a class="caplink" href="#liber-9-cap-11">Of the Misreadings, Social and Otherwise, Herewith Condemned</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Fixity, and the Long Assumption Before</h3>
@@ -5169,7 +5187,7 @@ a bush stands up, all branch and no degree —
 whose engine is the following chapter's fee.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Variation and Selection, the Whole Engine in Two Words</h3>
@@ -5244,7 +5262,7 @@ that opened for us. Only this machine:
 things differ; some things last; the rest between.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Mendel's Garden, and the Grammar of Heredity</h3>
@@ -5298,7 +5316,7 @@ The law of what gets passed from hand to hand
 was found by one who had no heir to stand.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Gene, and the Modern Synthesis</h3>
@@ -5337,7 +5355,7 @@ Think not of one beast but the pool it swims,
 a tide of frequencies, its rising rims
 and slackwater; the species is a spread,
 a census, not a specimen instead.
-Mutation shuffles (Book Eight keeps the typo);
+Mutation shuffles (<a class="xref" href="#liber-8">Book Eight</a> keeps the typo);
 selection sieves — that engine is not my hope
 to run again, it turns two chapters back;
 and drift is luck in ponds too small to track.</p>
@@ -5357,7 +5375,7 @@ an accident the language kept in print —
 and chlorophyll concedes the honest mint.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Speciation, or How One Becomes Two</h3>
@@ -5411,7 +5429,7 @@ A counterfeit that took, and stayed, and stands —
 this book's own vice, once, worn on honest hands.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of the Evidences — Fossils, Geography, and Molecules Agreeing</h3>
@@ -5453,7 +5471,7 @@ from other stock, by isolation's trade.
 Not one design repeated. One descent.</p>
       <p class="stanza">The third speaks small: the code is common, sent
 in the same letters through the whole of life
-(Book Eight will hold that thread; here, one clause, brief).
+(<a class="xref" href="#liber-8">Book Eight</a> will hold that thread; here, one clause, brief).
 And when the tree is drawn from what's inside —
 from sequence, not from skeleton — the wide
 two pictures overlay. Two witnesses,
@@ -5470,7 +5488,7 @@ So all of this is one long crane's-foot mark,
 one line that branched — and branching left this arc.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Sexual Selection, or the Peacock's Defense</h3>
@@ -5511,7 +5529,7 @@ the picture drawn-forth, portrait of the kind
 that beauty breeds when beauty breeds the mind.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Cooperation, Kinship, and the Puzzle of Kindness</h3>
@@ -5545,14 +5563,14 @@ the only currency the colony had.
 This much the ledger proves, and proves it plain:
 how kindness could survive a hungry world.
 It does not say what kindness feels, the grain
-beneath the sum, the fence Book III has curled
+beneath the sum, the fence <a class="xref" href="#liber-3">Book III</a> has curled
 around the kind. Some debts refuse the pen.
 Altruism — a word built, not grown, and then
 given, by Comte, to name what wasn't named:
 from <i>alter</i>, "other" — selfhood's grammar reclaimed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Man's Own Descent</h3>
@@ -5606,7 +5624,7 @@ To know the dirt you rose from, and stay low —
 that is the only rank this root will show.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Evolution Watched Live — Finches, Microbes, and Plagues</h3>
@@ -5677,7 +5695,7 @@ ed from the deep time we were told to trust:
 it happens now. It happens in us.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-9-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of the Misreadings, Social and Otherwise, Herewith Condemned</h3>
@@ -5692,7 +5710,7 @@ That nature makes a thing does not make right
 the thing it makes — else plague would have a rite,
 and parasites a claim, and every tick
 a moral standing earned by growing thick.
-Book Three has fenced this ground: no <i>is</i> has power
+<a class="xref" href="#liber-3">Book Three</a> has fenced this ground: no <i>is</i> has power
 to issue any <i>ought</i>, at any hour.
 The fallacy is old. Its harvest, new.</p>
       <p class="stanza">Then Spencer, who read Darwin partly through,
@@ -5764,20 +5782,20 @@ the truth about the door, and here it goes.</p>
   </div>
   <p class="argumentum">The bestiary survives; the entries are corrected. The pelican does not feed its young with its blood, but what the lichen actually is turns out stranger than anything Isidore copied from Pliny.</p>
   <ol class="capitula">
-    <li>Of Naming the Living, from Linnaeus to the Cladists</li>
-    <li>Of Plants, the Silent Majority</li>
-    <li>Of Fungi, a Kingdom Unsuspected</li>
-    <li>Of the Invertebrates, Which Are Most of Everything</li>
-    <li>Of Fishes, and the Coming Ashore</li>
-    <li>Of Reptiles, and the Long Reign of the Dinosaurs</li>
-    <li>Of Birds, the Dinosaurs That Remained</li>
-    <li>Of Mammals, Including the Reader</li>
-    <li>Of the Microbial World, the True Proprietors</li>
-    <li>Of Ecology — Webs, Niches, and Balances</li>
-    <li>Of Symbiosis, and the Lichen's Lesson</li>
-    <li>Of Extinction — Five Times Past, a Sixth Proceeding</li>
+    <li><a class="caplink" href="#liber-10-cap-1">Of Naming the Living, from Linnaeus to the Cladists</a></li>
+    <li><a class="caplink" href="#liber-10-cap-2">Of Plants, the Silent Majority</a></li>
+    <li><a class="caplink" href="#liber-10-cap-3">Of Fungi, a Kingdom Unsuspected</a></li>
+    <li><a class="caplink" href="#liber-10-cap-4">Of the Invertebrates, Which Are Most of Everything</a></li>
+    <li><a class="caplink" href="#liber-10-cap-5">Of Fishes, and the Coming Ashore</a></li>
+    <li><a class="caplink" href="#liber-10-cap-6">Of Reptiles, and the Long Reign of the Dinosaurs</a></li>
+    <li><a class="caplink" href="#liber-10-cap-7">Of Birds, the Dinosaurs That Remained</a></li>
+    <li><a class="caplink" href="#liber-10-cap-8">Of Mammals, Including the Reader</a></li>
+    <li><a class="caplink" href="#liber-10-cap-9">Of the Microbial World, the True Proprietors</a></li>
+    <li><a class="caplink" href="#liber-10-cap-10">Of Ecology — Webs, Niches, and Balances</a></li>
+    <li><a class="caplink" href="#liber-10-cap-11">Of Symbiosis, and the Lichen's Lesson</a></li>
+    <li><a class="caplink" href="#liber-10-cap-12">Of Extinction — Five Times Past, a Sixth Proceeding</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Naming the Living, from Linnaeus to the Cladists</h3>
@@ -5824,7 +5842,7 @@ to one containing hand.</p>
       <p class="stanza">Then Darwin came
 and made the filing system share a name
 with genealogy: the tree was real,
-not scheme but pedigree — as Book IX's seal
+not scheme but pedigree — as <a class="xref" href="#liber-9">Book IX</a>'s seal
 already taught, that lineage is the thing
 a branching diagram was made to sing.</p>
       <p class="stanza">From which the cladists drew their one hard rule.
@@ -5853,7 +5871,7 @@ ancestors backward. Each one made a claim.
 I bow here to my own: he taught me name.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Plants, the Silent Majority</h3>
@@ -5882,7 +5900,7 @@ on branches older than Rome —
 the waiting goes on.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Fungi, a Kingdom Unsuspected</h3>
@@ -5936,7 +5954,7 @@ Then Fleming's mold, a little paintbrush's kin —
 <i>penicillus</i>-named — first taught our wounds to mend and win.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Invertebrates, Which Are Most of Everything</h3>
@@ -5965,7 +5983,7 @@ they carry the world's hunger
 on their shining backs.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Fishes, and the Coming Ashore</h3>
@@ -5994,7 +6012,7 @@ but never the fisherman
 born from the same sea.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Reptiles, and the Long Reign of the Dinosaurs</h3>
@@ -6023,7 +6041,7 @@ our restless bright burning flame —
 we read their deep time</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Birds, the Dinosaurs That Remained</h3>
@@ -6052,7 +6070,7 @@ dinosaurs sing — we listen
 to the old, new dawn.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Mammals, Including the Reader</h3>
@@ -6081,7 +6099,7 @@ at the warm mathematics
 of the mother's gift.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Microbial World, the True Proprietors</h3>
@@ -6110,7 +6128,7 @@ but the smallest of tenants
 hold the master keys.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Ecology — Webs, Niches, and Balances</h3>
@@ -6135,7 +6153,7 @@ the house burns to stay itself —
 motion, not silence.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of Symbiosis, and the Lichen's Lesson</h3>
@@ -6160,7 +6178,7 @@ bacteria and host breathe
 as one false solo.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-10-cap-12">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 12</p>
       <h3>Of Extinction — Five Times Past, a Sixth Proceeding</h3>
@@ -6234,19 +6252,19 @@ so something of the quenched keeps a small flame.</p>
   </div>
   <p class="argumentum">Isidore described man as one more creature, and kept a chapter of monsters. The monsters are returned to the family as variation; the medicine, at last, mostly works.</p>
   <ol class="capitula">
-    <li>Of the Body's Plan</li>
-    <li>Of the Heart, and the Circuit of the Blood</li>
-    <li>Of Breath, Digestion, and the Interior Economy</li>
-    <li>Of the Immune System, the Body's Border Guard</li>
-    <li>Of the Microbiome — We Are Legion</li>
-    <li>Of Disease, and the Germ at Last Accused</li>
-    <li>Of Medicine's Arsenal — Drug, Knife, and Vaccine</li>
-    <li>Of Inheritance, and Its Disorders</li>
-    <li>Of Birth, Growth, and Aging</li>
-    <li>Of Public Health, Which Saved More Lives Than Surgery</li>
-    <li>Of the Portents Rehabilitated — Variation, Not Omen</li>
+    <li><a class="caplink" href="#liber-11-cap-1">Of the Body's Plan</a></li>
+    <li><a class="caplink" href="#liber-11-cap-2">Of the Heart, and the Circuit of the Blood</a></li>
+    <li><a class="caplink" href="#liber-11-cap-3">Of Breath, Digestion, and the Interior Economy</a></li>
+    <li><a class="caplink" href="#liber-11-cap-4">Of the Immune System, the Body's Border Guard</a></li>
+    <li><a class="caplink" href="#liber-11-cap-5">Of the Microbiome — We Are Legion</a></li>
+    <li><a class="caplink" href="#liber-11-cap-6">Of Disease, and the Germ at Last Accused</a></li>
+    <li><a class="caplink" href="#liber-11-cap-7">Of Medicine's Arsenal — Drug, Knife, and Vaccine</a></li>
+    <li><a class="caplink" href="#liber-11-cap-8">Of Inheritance, and Its Disorders</a></li>
+    <li><a class="caplink" href="#liber-11-cap-9">Of Birth, Growth, and Aging</a></li>
+    <li><a class="caplink" href="#liber-11-cap-10">Of Public Health, Which Saved More Lives Than Surgery</a></li>
+    <li><a class="caplink" href="#liber-11-cap-11">Of the Portents Rehabilitated — Variation, Not Omen</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Body's Plan</h3>
@@ -6310,7 +6328,7 @@ Of those four bodies, yours is the one that breathes.
 Everything before this chapter is filed in it.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Heart, and the Circuit of the Blood</h3>
@@ -6364,7 +6382,7 @@ Pump, not throne—yet still the poets start
 each ode the same worn way: <i>my heart, my heart.</i></p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Breath, Digestion, and the Interior Economy</h3>
@@ -6378,7 +6396,7 @@ the wet lace of the lungs unfolded, filled —
 an acreage of alveoli pressed
 to half a tennis court inside the vest.
 The oxygen goes down to feed the slow
-combustion Book the Eighth has taught you: so
+combustion <a class="xref" href="#liber-8">Book the Eighth</a> has taught you: so
 the fire is paid its fuel, and back through lace
 the carbon toll comes out across your face.</p>
       <p class="stanza">Then food. The molars do the gross intake;
@@ -6421,7 +6439,7 @@ runs down the middle of the man. Outside
 is what the inside carries. Then: divide.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Immune System, the Body's Border Guard</h3>
@@ -6460,7 +6478,7 @@ astray: the guard draws steel on kin, on dust —
 exemption's gift, and burden of mistrust.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of the Microbiome — We Are Legion</h3>
@@ -6494,7 +6512,7 @@ grown for the guests, and not for you, the host.</p>
       <p class="stanza">Then came the cure that carpet-bombs the town:
 the antibiotic burns the forest down
 to kill one wolf. (The bill for that campaign
-is filed in Book the Ninth, and comes again.)
+is filed in <a class="xref" href="#liber-9">Book the Ninth</a>, and comes again.)
 And in the ash a succession takes the ground —
 C. difficile, that opportunist crowned
 by absence, ruling ruin. So we bring
@@ -6525,7 +6543,7 @@ that answer to your name, or share your blood.
 You are the ground. They're what has made it good.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Disease, and the Germ at Last Accused</h3>
@@ -6607,7 +6625,7 @@ Truth came a generation late to court.
 The dead, by then, were long past the report.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Medicine's Arsenal — Drug, Knife, and Vaccine</h3>
@@ -6619,14 +6637,14 @@ which started as a guess beneath a rug
 of herbal rumor — bark, root, resin, weed,
 tried on the dying, credited by need,
 until the trial arrived with its cold court
-(Book Three convened it) and cut short the sort
+(<a class="xref" href="#liber-3">Book Three</a> convened it) and cut short the sort
 of cure that only cured because believed.
 The honest specimen the willow leaved
 us: bark for fever, chewed a thousand years,
 resolved at last to acid — so aspirin clears
 its lineage. Then the antibiotic age,
 one windfall generation, whose bright page
-is closing as they learn (Book Nine has said
+is closing as they learn (<a class="xref" href="#liber-9">Book Nine</a> has said
 how resistance answers).</p>
       <p class="stanza">Second is the dread
 old instrument, the knife, which for all time
@@ -6666,7 +6684,7 @@ is younger, nearly all of it, than men
 and women living now. It was not, and then.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Inheritance, and Its Disorders</h3>
@@ -6674,7 +6692,7 @@ and women living now. It was not, and then.</p>
     </div>
     <div class="verse">
       <p class="canto">I.</p>
-      <p class="stanza">Book IX has told the theory of the odds —
+      <p class="stanza"><a class="xref" href="#liber-9">Book IX</a> has told the theory of the odds —
 here walks the coin-flip through a waiting room.
 One faulty copy, dominant, defrauds
 the autumn of a mind: Huntington's doom
@@ -6706,7 +6724,7 @@ The name is but a place where signs are known —
 not judgment on the runner — fact alone.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Birth, Growth, and Aging</h3>
@@ -6721,7 +6739,7 @@ and fetal doors, once open, now are turned
 and sealed — the shunts fall shut, the bypassed heart
 reroutes for good to blood it never knew.
 Then infancy, the long defenseless start,
-a wager laid on care (Book X is due
+a wager laid on care (<a class="xref" href="#liber-10">Book X</a> is due
 that reckoning). Growth is schooling, slow, exact,
 the body's long apprenticeship in bone
 and reach, till adolescence comes to act
@@ -6730,7 +6748,7 @@ to raise new rooms. The arc is climbing still —
 each threshold crossed by neither wish nor will.</p>
       <p class="canto">II.</p>
       <p class="stanza">Age is a debt that living all along
-delays — Book VIII will tally what we owe
+delays — <a class="xref" href="#liber-8">Book VIII</a> will tally what we owe
 in small unmended costs, a quiet throng
 of failures banked, that no one lives to know.
 Not every lengthened life is lived the same —
@@ -6745,7 +6763,7 @@ The infant is the one who has no word —
 and fate is but the same verb, later heard.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Public Health, Which Saved More Lives Than Surgery</h3>
@@ -6811,7 +6829,7 @@ of what has kept you here was never taught
 at any bedside — it was piped, and gauged, and thought.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-11-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of the Portents Rehabilitated — Variation, Not Omen</h3>
@@ -6887,19 +6905,19 @@ We return them, with apologies, to the census.</p>
   </div>
   <p class="argumentum">The instrument that compiled every book in this collection here turns upon itself — and finds a constructor of appearances, a reviser of memories, and a confident narrator of decisions already made elsewhere.</p>
   <ol class="capitula">
-    <li>Of the Brain, Three Pounds of Reasons</li>
-    <li>Of the Neuron, and Its Signal</li>
-    <li>Of Perception, a Construction and Not a Window</li>
-    <li>Of Memory, and Its Quiet Revisions</li>
-    <li>Of Emotion, the Older Government</li>
-    <li>Of Learning, in Creatures and in Machines</li>
-    <li>Of Language in the Child, Acquired and Not Taught</li>
-    <li>Of Bias, and the Predictable Errors</li>
-    <li>Of the Mind's Afflictions, from Possession to Diagnosis</li>
-    <li>Of Animal Minds, and What May Be Within</li>
-    <li>Of Consciousness, the Hard Problem Left Standing Open</li>
+    <li><a class="caplink" href="#liber-12-cap-1">Of the Brain, Three Pounds of Reasons</a></li>
+    <li><a class="caplink" href="#liber-12-cap-2">Of the Neuron, and Its Signal</a></li>
+    <li><a class="caplink" href="#liber-12-cap-3">Of Perception, a Construction and Not a Window</a></li>
+    <li><a class="caplink" href="#liber-12-cap-4">Of Memory, and Its Quiet Revisions</a></li>
+    <li><a class="caplink" href="#liber-12-cap-5">Of Emotion, the Older Government</a></li>
+    <li><a class="caplink" href="#liber-12-cap-6">Of Learning, in Creatures and in Machines</a></li>
+    <li><a class="caplink" href="#liber-12-cap-7">Of Language in the Child, Acquired and Not Taught</a></li>
+    <li><a class="caplink" href="#liber-12-cap-8">Of Bias, and the Predictable Errors</a></li>
+    <li><a class="caplink" href="#liber-12-cap-9">Of the Mind's Afflictions, from Possession to Diagnosis</a></li>
+    <li><a class="caplink" href="#liber-12-cap-10">Of Animal Minds, and What May Be Within</a></li>
+    <li><a class="caplink" href="#liber-12-cap-11">Of Consciousness, the Hard Problem Left Standing Open</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Brain, Three Pounds of Reasons</h3>
@@ -6912,7 +6930,7 @@ and mostly water, and the rest of it
 largely fat — the fatty sheathing that
 makes thought run fast enough to be a thought.
 It draws a fifth of all the body's fuel
-(Book VIII has billed you for that appetite)
+(<a class="xref" href="#liber-8">Book VIII</a> has billed you for that appetite)
 while sitting perfectly, entirely still.
 Some eighty-six billion neurons live in there,
 a census taken carefully, by hand,
@@ -6967,7 +6985,7 @@ the instrument and specimen the same.
 Read the whole book with that discount applied.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Neuron, and Its Signal</h3>
@@ -7020,7 +7038,7 @@ only the old string's tension and release,
 the plucked cord sounding, and the sound's increase.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Perception, a Construction and Not a Window</h3>
@@ -7057,7 +7075,7 @@ Latin fused <i>per</i> with <i>capere</i>: to seize
 entirely — no window; the hand's expertise.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Memory, and Its Quiet Revisions</h3>
@@ -7111,7 +7129,7 @@ of teller shaping teller, tale on tale.
 The self's most practiced story is the tale.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Emotion, the Older Government</h3>
@@ -7138,7 +7156,7 @@ the cortex files the drop as terror's sum,
 or tags the same fall thrilling, cool and light.
 Appraisal is the lever, not the spark —
 one word for shame in one tongue splits in two
-elsewhere (Book Thirteen keeps the fuller mark);
+elsewhere (<a class="xref" href="#liber-13">Book Thirteen</a> keeps the fuller mark);
 feeling is dialect, and forms construe.
 Unseat the passions, and let reason choose
 alone — a despot, calculating, cold;
@@ -7148,7 +7166,7 @@ all traction: card-game choices left untold.
 to riot, now moves us — motive, unbowed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Learning, in Creatures and in Machines</h3>
@@ -7189,7 +7207,7 @@ the crossing strengthens with the traffic through.</p>
 their networks are a metaphor's remains,
 where gradient descent, ten million tries,
 does Skinner's patient shaping without eyes.
-(Book Twenty holds that argument; I nod
+(<a class="xref" href="#liber-20">Book Twenty</a> holds that argument; I nod
 and pass, unwilling to usurp its rod.)</p>
       <p class="stanza">And <i>docile</i> once meant <i>apt to learn</i>, from <i>docere</i>,
 to teach — the root that gave us <i>doctor</i> (there
@@ -7203,7 +7221,7 @@ it here, mid-book: the reader, reading, is
 the subject matter, proving what this is.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Language in the Child, Acquired and Not Taught</h3>
@@ -7240,7 +7258,7 @@ to "glamour" — that same spell cast on the eyes.
 The child, by five, unlearned, had earned that prize.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Bias, and the Predictable Errors</h3>
@@ -7285,7 +7303,7 @@ a useful one; the mind is not two men.</p>
       <p class="stanza">The remedies are dull, and work: ask when
 this kind of thing has gone this way before —
 the outside view, the base rate (that good reverend's floor,
-whose fuller argument Book Two will keep);
+whose fuller argument <a class="xref" href="#liber-2">Book Two</a> will keep);
 convene a premortem: assume the heap
 has failed, and say why. Write the reasons down.
 The catalogue is not contempt. Set down
@@ -7295,7 +7313,7 @@ of one plain use: you cannot roll it straight,
 but knowing how it leans, you aim off-weight.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Mind's Afflictions, from Possession to Diagnosis</h3>
@@ -7372,7 +7390,7 @@ the afflicted mind is a mind, entirely.
 The person, throughout, remains the person.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Animal Minds, and What May Be Within</h3>
@@ -7380,7 +7398,7 @@ The person, throughout, remains the person.</p>
     </div>
     <div class="verse">
       <p class="stanza">Admit the evidence, and read it plain:
-the corvid's forethought — Book Ten holds the thread —
+the corvid's forethought — <a class="xref" href="#liber-10">Book Ten</a> holds the thread —
 the chimpanzee that knows itself again
 behind the mirror-glass, not fooled, it's said,
 by any stranger looking through the glass —
@@ -7409,7 +7427,7 @@ own furred disguise. The hound was <i>sagax</i> first —
 keen-scented — long before the sage's thirst.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-12-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of Consciousness, the Hard Problem Left Standing Open</h3>
@@ -7459,7 +7477,7 @@ who cannot file the claim in our language.</p>
 Conscious is Latin <i>conscius</i>: <i>con</i> and <i>scire</i>,
 to know with, to know together. The kinship
 of <i>scire</i> to an older sense of cutting
-belongs to Book III; here only the compound.
+belongs to <a class="xref" href="#liber-3">Book III</a>; here only the compound.
 <i>Conscius</i> meant one who shares the knowledge —
 a witness, or a confidant, or an accomplice.
 Conscience is the same word, barely altered:
@@ -7473,7 +7491,7 @@ the second party absorbed into the first.
 So consciousness is, by its own name, a joint
 enterprise privatized — a knowing-with
 that took the with inside and shut the door.</p>
-      <p class="stanza">The book of mind ends where Book I and Book IV
+      <p class="stanza">The book of mind ends where <a class="xref" href="#liber-1">Book I</a> and <a class="xref" href="#liber-4">Book IV</a>
 ended, on an open and well-made question,
 which is the only kind worth leaving open.
 The difference is only this: the others
@@ -7500,19 +7518,19 @@ two parties, one knowledge, held between them, here.</p>
   </div>
   <p class="argumentum">The sign is arbitrary; the founder's premise is overturned in his own house. Yet etymology survives its demotion — no longer a key to essences, it becomes a key to history, with citations.</p>
   <ol class="capitula">
-    <li>Of What a Language Is, and What It Is Not</li>
-    <li>Of Sounds, and How the Mouth Makes Them</li>
-    <li>Of Grammar, the Native Engineering</li>
-    <li>Of Meaning — Said, Implied, and Taken</li>
-    <li>Of the World's Tongues, and Their Families</li>
-    <li>Of Sound Change, the True Engine of Etymology</li>
-    <li>Of Writing, the Second Invention</li>
-    <li>Of Literacy, and What It Rewires</li>
-    <li>Of Translation, the Necessary Treason</li>
-    <li>Of Dead and Dying Languages, and What Departs with Them</li>
+    <li><a class="caplink" href="#liber-13-cap-1">Of What a Language Is, and What It Is Not</a></li>
+    <li><a class="caplink" href="#liber-13-cap-2">Of Sounds, and How the Mouth Makes Them</a></li>
+    <li><a class="caplink" href="#liber-13-cap-3">Of Grammar, the Native Engineering</a></li>
+    <li><a class="caplink" href="#liber-13-cap-4">Of Meaning — Said, Implied, and Taken</a></li>
+    <li><a class="caplink" href="#liber-13-cap-5">Of the World's Tongues, and Their Families</a></li>
+    <li><a class="caplink" href="#liber-13-cap-6">Of Sound Change, the True Engine of Etymology</a></li>
+    <li><a class="caplink" href="#liber-13-cap-7">Of Writing, the Second Invention</a></li>
+    <li><a class="caplink" href="#liber-13-cap-8">Of Literacy, and What It Rewires</a></li>
+    <li><a class="caplink" href="#liber-13-cap-9">Of Translation, the Necessary Treason</a></li>
+    <li><a class="caplink" href="#liber-13-cap-10">Of Dead and Dying Languages, and What Departs with Them</a></li>
     <li class="annexus"><a href="annexus.html">Annexus Alphabeticus — Word-Histories A to Z, Kept Alphabetical in Memory of the Old Book X</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of What a Language Is, and What It Is Not</h3>
@@ -7582,7 +7600,7 @@ still wears, in nearly every mouth that has it,
 the name of a small muscle, warm and working.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Sounds, and How the Mouth Makes Them</h3>
@@ -7637,7 +7655,7 @@ The same equipment sits behind each face;
 we simply learned to play a different place.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Grammar, the Native Engineering</h3>
@@ -7674,7 +7692,7 @@ a rule obeyed, unstated, nonetheless.
 No engineer signed this. The blueprints hold.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Meaning — Said, Implied, and Taken</h3>
@@ -7711,7 +7729,7 @@ in motion: said, implied, and — third part —
 taken. The listener's the one who'll weave.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of the World's Tongues, and Their Families</h3>
@@ -7770,7 +7788,7 @@ kin to Hindi and to Persian by the tables
 that link the father to the <i>pater</i>'s syllables.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Sound Change, the True Engine of Etymology</h3>
@@ -7841,7 +7859,7 @@ which is this whole edition's tale, confessed:
 the study of the true, its truth redressed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Writing, the Second Invention</h3>
@@ -7912,7 +7930,7 @@ of medium comes in — and, filing, write it down,
 and hand the proof against us to the town.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Literacy, and What It Rewires</h3>
@@ -7950,7 +7968,7 @@ You've solved this. Software installed at the middle
 of childhood, running still: the quietest prize.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Translation, the Necessary Treason</h3>
@@ -7989,7 +8007,7 @@ Nor have you touched the hand that wrote this, framed</p>
 be given. This too was borne across, unblamed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-13-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Dead and Dying Languages, and What Departs with Them</h3>
@@ -8076,20 +8094,20 @@ The words we play with here are survivors' words.</p>
   </div>
   <p class="argumentum">Isidore cataloged the nations by their reputed characters. We now study the machinery instead: kinship, norms, cities — the inventions by which strangers manage to live as if they were kin.</p>
   <ol class="capitula">
-    <li>Of the Social Animal</li>
-    <li>Of Kinship, the First Institution</li>
-    <li>Of Band, Village, and City — the Scaling of Us</li>
-    <li>Of Norms, the Invisible Law</li>
-    <li>Of Hierarchy and Class</li>
-    <li>Of Gender, Variously Arranged</li>
-    <li>Of Ritual, and What It Accomplishes</li>
-    <li>Of Food as Culture, or the Cuisine of the Nations</li>
-    <li>Of Cities, the Second Habitat</li>
-    <li>Of Migration, the Constant</li>
-    <li>Of Identity — Ethnicity, Nation, and the Tribe Rebooted</li>
-    <li>Of the Mediated Society, Recently Begun and Poorly Understood</li>
+    <li><a class="caplink" href="#liber-14-cap-1">Of the Social Animal</a></li>
+    <li><a class="caplink" href="#liber-14-cap-2">Of Kinship, the First Institution</a></li>
+    <li><a class="caplink" href="#liber-14-cap-3">Of Band, Village, and City — the Scaling of Us</a></li>
+    <li><a class="caplink" href="#liber-14-cap-4">Of Norms, the Invisible Law</a></li>
+    <li><a class="caplink" href="#liber-14-cap-5">Of Hierarchy and Class</a></li>
+    <li><a class="caplink" href="#liber-14-cap-6">Of Gender, Variously Arranged</a></li>
+    <li><a class="caplink" href="#liber-14-cap-7">Of Ritual, and What It Accomplishes</a></li>
+    <li><a class="caplink" href="#liber-14-cap-8">Of Food as Culture, or the Cuisine of the Nations</a></li>
+    <li><a class="caplink" href="#liber-14-cap-9">Of Cities, the Second Habitat</a></li>
+    <li><a class="caplink" href="#liber-14-cap-10">Of Migration, the Constant</a></li>
+    <li><a class="caplink" href="#liber-14-cap-11">Of Identity — Ethnicity, Nation, and the Tribe Rebooted</a></li>
+    <li><a class="caplink" href="#liber-14-cap-12">Of the Mediated Society, Recently Begun and Poorly Understood</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Social Animal</h3>
@@ -8099,7 +8117,7 @@ The words we play with here are survivors' words.</p>
       <p class="stanza">Begin with the audit. Take the species down
 to what it cannot do without and count:
 the infant, helpless past all reason, born
-too soon — the wager Book Eleven told,
+too soon — the wager <a class="xref" href="#liber-11">Book Eleven</a> told,
 the skull that would not fit if it waited longer —
 and so arrives unfinished, requiring hands
 not its own for years. No other ape
@@ -8166,7 +8184,7 @@ one has. It is a thing one is <i>granted</i>,
 and then, if one is lucky, learns to grant.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Kinship, the First Institution</h3>
@@ -8219,7 +8237,7 @@ is kinship's understudy, called to play
 the night the family's reach gave out midway.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Band, Village, and City — the Scaling of Us</h3>
@@ -8270,7 +8288,7 @@ your household, and your street, and then the wide
 uncounted network no one's eyes can ride.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Norms, the Invisible Law</h3>
@@ -8324,7 +8342,7 @@ So custom, costume — twinned since Latin's hour —
 proclaim: what we habitually wear is power.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Hierarchy and Class</h3>
@@ -8383,7 +8401,7 @@ that follows — law, and money, and the drum —
 is partly just its account-book, and its sum.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Gender, Variously Arranged</h3>
@@ -8416,13 +8434,13 @@ only the filing habit of a tongue
 to, arbitrary, tongue to tongue, young to young).
 The same root walked to art and there was genre;
 walked straight to life's own ranks and there was genus
-(that census kept in Book the Tenth); and then
+(that census kept in <a class="xref" href="#liber-10">Book the Tenth</a>); and then
 came home, through French, to persons — gendre, gender:
 the sexed and social, seam laid bare between us.
 The word for sorting, sorting us again.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Ritual, and What It Accomplishes</h3>
@@ -8476,7 +8494,7 @@ the rites this chapter told are thresholds crossed,
 and <i>limen</i> is the wood their meaning glossed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Food as Culture, or the Cuisine of the Nations</h3>
@@ -8486,7 +8504,7 @@ and <i>limen</i> is the wood their meaning glossed.</p>
       <p class="stanza">No people eats it raw. Across the earth,
 whatever else divides us from our birth,
 the fire is turned on dinner. And the hearth
-(Book VIII has the flame, and knows its worth)
+(<a class="xref" href="#liber-8">Book VIII</a> has the flame, and knows its worth)
 was arguably the first thing we called home:
 a place to sit, a reason not to roam.</p>
       <p class="stanza">Cooking is the universal. What we cook
@@ -8533,7 +8551,7 @@ the sociology is mostly done.
 The kitchen and the prodigy are one.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Cities, the Second Habitat</h3>
@@ -8602,7 +8620,7 @@ The coral does not know itself as reef.
 We do, and keep on building past belief.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Migration, the Constant</h3>
@@ -8682,7 +8700,7 @@ whose people have always been here. Here is where
 the walking stopped for a while. It has not stopped.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of Identity — Ethnicity, Nation, and the Tribe Rebooted</h3>
@@ -8717,7 +8735,7 @@ the thing it claims to only document.
 Latin <i>natio</i>: born of <i>nasci</i>, bear —
 a birth-word first, a breed, a bloodline meant
 for cattle, then for kin (the fuller heir
-of that root keeps its house in Book Thirteen).
+of that root keeps its house in <a class="xref" href="#liber-13">Book Thirteen</a>).
 The state's own myth of common blood is seen,
 plain in the name it wears: a word for birth
 now dressed the modern tribe in mother's cloth —
@@ -8727,7 +8745,7 @@ The teller chooses which the truth will be.
 That choice, not blood, is the whole history.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-14-cap-12">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 12</p>
       <h3>Of the Mediated Society, Recently Begun and Poorly Understood</h3>
@@ -8831,20 +8849,20 @@ we had, in these years, catastrophically enough.</p>
   </div>
   <p class="argumentum">In the old order these books stood above man. Here they stand among his institutions — the one relocation the compiler of 636 would have died rather than make, and the honest summary of the centuries between.</p>
   <ol class="capitula">
-    <li>Of the Religious Impulse, Considered as Human</li>
-    <li>Of Ancestors, Spirits, and the First Sacred</li>
-    <li>Of the Traditions of India</li>
-    <li>Of the Buddha's Way</li>
-    <li>Of Israel, and Its Covenant</li>
-    <li>Of Christianity — the Compiler's Own House, Viewed Now from the Street</li>
-    <li>Of Islam, Which Arose within the Compiler's Own Lifetime</li>
-    <li>Of the Ways of East Asia</li>
-    <li>Of New Religions, Continually Founded</li>
-    <li>Of Unbelief, and the Secular Settlement</li>
-    <li>Of the Sacred and the Sword</li>
-    <li>Of What Remains Sacred in a Disenchanted Age</li>
+    <li><a class="caplink" href="#liber-15-cap-1">Of the Religious Impulse, Considered as Human</a></li>
+    <li><a class="caplink" href="#liber-15-cap-2">Of Ancestors, Spirits, and the First Sacred</a></li>
+    <li><a class="caplink" href="#liber-15-cap-3">Of the Traditions of India</a></li>
+    <li><a class="caplink" href="#liber-15-cap-4">Of the Buddha's Way</a></li>
+    <li><a class="caplink" href="#liber-15-cap-5">Of Israel, and Its Covenant</a></li>
+    <li><a class="caplink" href="#liber-15-cap-6">Of Christianity — the Compiler's Own House, Viewed Now from the Street</a></li>
+    <li><a class="caplink" href="#liber-15-cap-7">Of Islam, Which Arose within the Compiler's Own Lifetime</a></li>
+    <li><a class="caplink" href="#liber-15-cap-8">Of the Ways of East Asia</a></li>
+    <li><a class="caplink" href="#liber-15-cap-9">Of New Religions, Continually Founded</a></li>
+    <li><a class="caplink" href="#liber-15-cap-10">Of Unbelief, and the Secular Settlement</a></li>
+    <li><a class="caplink" href="#liber-15-cap-11">Of the Sacred and the Sword</a></li>
+    <li><a class="caplink" href="#liber-15-cap-12">Of What Remains Sacred in a Disenchanted Age</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Religious Impulse, Considered as Human</h3>
@@ -8916,7 +8934,7 @@ An edition made of honest disputed roots
 could ask no better stone to start upon.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Ancestors, Spirits, and the First Sacred</h3>
@@ -8993,7 +9011,7 @@ the plate set out, the grave gone bare and clean —
 local, familial, daily, and still here between.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of the Traditions of India</h3>
@@ -9032,7 +9050,7 @@ So when you bow to breath on rented floor,
 the ox still pulls behind that oldest door.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Buddha's Way</h3>
@@ -9077,7 +9095,7 @@ the hand that holds it. Craving is the fire;
 the going-out is all the word requires.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Israel, and Its Covenant</h3>
@@ -9155,7 +9173,7 @@ Continuance is the argument's last word,
 and it is not a word. It is a people.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Christianity — the Compiler's Own House, Viewed Now from the Street</h3>
@@ -9238,7 +9256,7 @@ and hear the singing and not know the rooms.
 That is the honest distance. We keep it, and pass on.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Islam, Which Arose within the Compiler's Own Lifetime</h3>
@@ -9285,7 +9303,7 @@ A practiced life, and practicable — that is
 the design. Nothing here requires a genius.</p>
       <p class="stanza">Then Baghdad, and the House of Wisdom, and
 the centuries this edition owes its bill to.
-Book I carries al-Khwarizmi's name in two
+<a class="xref" href="#liber-1">Book I</a> carries al-Khwarizmi's name in two
 disguises: his book gave us algebra,
 his own name, worn down through Latin, gave us algorithm.
 Half the stars overhead answer to Arabic —
@@ -9305,14 +9323,14 @@ a Muslim is the participle: one who submits,
 one who is made whole. And the same three letters,
 turned in the neighbor tongue, give shalom
 as they give salaam. The greeting is one word
-in two languages, born together, as Book XIII
+in two languages, born together, as <a class="xref" href="#liber-13">Book XIII</a>
 taught the reader to hear such things.
 The bridge is in the grammar. It stands
 whether or not a soul walks over it.
 The compiler leaves it standing, and stops here.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of the Ways of East Asia</h3>
@@ -9351,7 +9369,7 @@ No creed was filed above the rest as true —
 just harmony, and what that word can do.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of New Religions, Continually Founded</h3>
@@ -9418,7 +9436,7 @@ Which one? The chapter will not guess. It ends
 by noting only that the guessing bends.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Unbelief, and the Secular Settlement</h3>
@@ -9494,7 +9512,7 @@ page after page, describing all the same:
 belief and unbelief, and neither shamed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of the Sacred and the Sword</h3>
@@ -9569,7 +9587,7 @@ The honest finding is that both columns are long,
 and that the chapter declines to close the ledger.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-15-cap-12">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 12</p>
       <h3>Of What Remains Sacred in a Disenchanted Age</h3>
@@ -9614,7 +9632,7 @@ language will not carry it, and those cadences will.</p>
 The eclipse crowds gather on the interstate shoulder
 and make a sound nobody plans to make.
 The astronauts come back changed by a window —
-Book Five holds that.</p>
+<a class="xref" href="#liber-5">Book Five</a> holds that.</p>
       <p class="stanza">Two readings, and we keep them
 both open, as we have all the way through:
 either the sacred was always ours, a thing
@@ -9661,20 +9679,20 @@ and it was cut by hands, and it still opens.</p>
   </div>
   <p class="argumentum">Isidore, drawing on Rome, knew that law is custom hardened and written down. What he lacked was the sequel: rights asserted against the sovereign, and the long experiment of the ruled choosing the rulers.</p>
   <ol class="capitula">
-    <li>Of Custom Hardening into Law</li>
-    <li>Of the Great Codes, Hammurabi to Justinian</li>
-    <li>Of Constitutions, the Laws about Laws</li>
-    <li>Of Democracy, and Its Rivals</li>
-    <li>Of Rights, Asserted and Extended</li>
-    <li>Of Courts, Procedure, and Proof</li>
-    <li>Of Crime and Punishment</li>
-    <li>Of the State, and Its Monopoly on Force</li>
-    <li>Of the Law between Nations, Such as It Is</li>
-    <li>Of War — Its Rules, and Their Breaking</li>
-    <li>Of Empire, and Its Undoing</li>
-    <li>Of the Administrative State, Where Most Law Now Lives</li>
+    <li><a class="caplink" href="#liber-16-cap-1">Of Custom Hardening into Law</a></li>
+    <li><a class="caplink" href="#liber-16-cap-2">Of the Great Codes, Hammurabi to Justinian</a></li>
+    <li><a class="caplink" href="#liber-16-cap-3">Of Constitutions, the Laws about Laws</a></li>
+    <li><a class="caplink" href="#liber-16-cap-4">Of Democracy, and Its Rivals</a></li>
+    <li><a class="caplink" href="#liber-16-cap-5">Of Rights, Asserted and Extended</a></li>
+    <li><a class="caplink" href="#liber-16-cap-6">Of Courts, Procedure, and Proof</a></li>
+    <li><a class="caplink" href="#liber-16-cap-7">Of Crime and Punishment</a></li>
+    <li><a class="caplink" href="#liber-16-cap-8">Of the State, and Its Monopoly on Force</a></li>
+    <li><a class="caplink" href="#liber-16-cap-9">Of the Law between Nations, Such as It Is</a></li>
+    <li><a class="caplink" href="#liber-16-cap-10">Of War — Its Rules, and Their Breaking</a></li>
+    <li><a class="caplink" href="#liber-16-cap-11">Of Empire, and Its Undoing</a></li>
+    <li><a class="caplink" href="#liber-16-cap-12">Of the Administrative State, Where Most Law Now Lives</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Custom Hardening into Law</h3>
@@ -9762,7 +9780,7 @@ what we decide — the past with power to bind,
 a riverbed cut by the passing mind.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Great Codes, Hammurabi to Justinian</h3>
@@ -9815,7 +9833,7 @@ And every all-receiving book, once bound,
 is missing something. Ask us. We have found.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Constitutions, the Laws about Laws</h3>
@@ -9873,7 +9891,7 @@ a promise that it makes about itself,
 kept by the people who won't shelve the shelf.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Democracy, and Its Rivals</h3>
@@ -9910,7 +9928,7 @@ A "ballot" is, by name, a small dropped ball —
 the only rule with tools to mend its fall.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Rights, Asserted and Extended</h3>
@@ -9947,7 +9965,7 @@ A right's a promise wrung, not freely given —
 renewed each time the weak have stood and striven.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Courts, Procedure, and Proof</h3>
@@ -9998,7 +10016,7 @@ until the doubt a reasonable mind has groomed
 is gone — while in the civil suit next door
 the balance simply tips, and fifty-one beats more
 than forty-nine, arithmetic that bows
-to Book the Second's counting. And still, somehow,
+to <a class="xref" href="#liber-2">Book the Second</a>'s counting. And still, somehow,
 the wrongly held come out with decades gone,
 the confident eyewitness proven wrong
 as memory's own chapter warned they'd be.
@@ -10007,7 +10025,7 @@ it cannot read a heart, and says as much:
 the form <i>is</i> the fairness. There's no other touch.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Crime and Punishment</h3>
@@ -10072,7 +10090,7 @@ upon. However high the statehouse stands,
 the truest portrait's painted underground, by hand.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of the State, and Its Monopoly on Force</h3>
@@ -10136,7 +10154,7 @@ was assembled by mistake. So was the bargain —
 the leviathan, permanently under renegotiation.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Law between Nations, Such as It Is</h3>
@@ -10173,7 +10191,7 @@ No landlord keeps the fence — the neighbors do,
 leaning and patched, still standing: proof it's true.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of War — Its Rules, and Their Breaking</h3>
@@ -10210,7 +10228,7 @@ and do not call the empty half a lie.</p>
       <p class="stanza">The twentieth century brought total war:
 the city itself made target, the factory
 and the street beside it entered on the map
-as one legitimate mark. Book Eighteen
+as one legitimate mark. <a class="xref" href="#liber-18">Book Eighteen</a>
 holds the wars themselves; this chapter holds the rules.</p>
       <p class="stanza">Two words are load-bearing here. The first is "war,"
 from Frankish <i>werra</i> — confusion, strife, quarrel —
@@ -10235,7 +10253,7 @@ that reduces, measurably, the failure's price —
 the fence built inside the fire, and holding some.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of Empire, and Its Undoing</h3>
@@ -10301,7 +10319,7 @@ the largest English-speaking nations are not
 the colonizer's, and have not been for some time.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-16-cap-12">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 12</p>
       <h3>Of the Administrative State, Where Most Law Now Lives</h3>
@@ -10389,20 +10407,20 @@ between the ink and everybody's hands.</p>
   </div>
   <p class="argumentum">From oikonomia, the law of the household — a derivation Isidore would have approved, since for once the etymology is true. The household became the world, and its bookkeeping became a science of scarcity.</p>
   <ol class="capitula">
-    <li>Of Scarcity, the First Premise</li>
-    <li>Of Money, from Shell to Fiat to Cipher</li>
-    <li>Of Markets, and the Information Hidden in Prices</li>
-    <li>Of Trade, and the Gains from Difference</li>
-    <li>Of Firms and Labor</li>
-    <li>Of Growth — the Hockey Stick, Strangest Fact in the Record</li>
-    <li>Of Inequality, and Its Measures</li>
-    <li>Of Booms, Panics, and Central Banks</li>
-    <li>Of Debt, the Time Machine of Money</li>
-    <li>Of Development, and Why Nations Diverge</li>
-    <li>Of the Household Itself, the Word's Own Root</li>
-    <li>Of Externalities, and the Bill Now Due to Book VII</li>
+    <li><a class="caplink" href="#liber-17-cap-1">Of Scarcity, the First Premise</a></li>
+    <li><a class="caplink" href="#liber-17-cap-2">Of Money, from Shell to Fiat to Cipher</a></li>
+    <li><a class="caplink" href="#liber-17-cap-3">Of Markets, and the Information Hidden in Prices</a></li>
+    <li><a class="caplink" href="#liber-17-cap-4">Of Trade, and the Gains from Difference</a></li>
+    <li><a class="caplink" href="#liber-17-cap-5">Of Firms and Labor</a></li>
+    <li><a class="caplink" href="#liber-17-cap-6">Of Growth — the Hockey Stick, Strangest Fact in the Record</a></li>
+    <li><a class="caplink" href="#liber-17-cap-7">Of Inequality, and Its Measures</a></li>
+    <li><a class="caplink" href="#liber-17-cap-8">Of Booms, Panics, and Central Banks</a></li>
+    <li><a class="caplink" href="#liber-17-cap-9">Of Debt, the Time Machine of Money</a></li>
+    <li><a class="caplink" href="#liber-17-cap-10">Of Development, and Why Nations Diverge</a></li>
+    <li><a class="caplink" href="#liber-17-cap-11">Of the Household Itself, the Word's Own Root</a></li>
+    <li><a class="caplink" href="#liber-17-cap-12">Of Externalities, and the Bill Now Due to Book VII</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Scarcity, the First Premise</h3>
@@ -10439,7 +10457,7 @@ The chapters on the rights and on the sacred
 adjoin this one, and hold their ground against it.
 This book describes how scarce things are allotted;
 it does not say what any of them is worth —
-Book III has set that fence, and we respect it.</p>
+<a class="xref" href="#liber-3">Book III</a> has set that fence, and we respect it.</p>
       <p class="stanza">The dreams of afterward deserve a hearing.
 Each age has promised that the shortage ends;
 each age has been abundant, and has minted
@@ -10461,7 +10479,7 @@ and all that follows here is arithmetic
 performed upon the fact of not-having-everything.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Money, from Shell to Fiat to Cipher</h3>
@@ -10533,7 +10551,7 @@ Not shell, not coin, not note, not what it cost —
 Money is memory, and nothing lost.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Markets, and the Information Hidden in Prices</h3>
@@ -10584,7 +10602,7 @@ An instrument, then — astonishing, amoral, spare;
 it plays what it is tuned to. Someone must be there.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Trade, and the Gains from Difference</h3>
@@ -10621,7 +10639,7 @@ Not so the wind: to "blow trade" always spoke
 of steady course — the merchant story's broke.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Firms and Labor</h3>
@@ -10653,7 +10671,7 @@ The worker sells an hour he cannot protect:
 unsold, it spoils; no cellar keeps a day;
 the seller must sell now, and take the pay.
 The other side has depth, and depth can wait —
-Book II's long ruin arithmetic says the rest of that fate:
+<a class="xref" href="#liber-2">Book II</a>'s long ruin arithmetic says the rest of that fate:
 the shallower purse goes broke before the deep,
 so patience is a good the poor can't keep.
 Hence unions, whose whole arithmetic was scale:
@@ -10668,7 +10686,7 @@ Most waking hours of most lives run through this door.
 The book records it, and it honors what they bore.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Growth — the Hockey Stick, Strangest Fact in the Record</h3>
@@ -10693,11 +10711,11 @@ about a thing that ought to stop the breath.</p>
       <p class="stanza">The causes are still argued. Seat them fairly.
 Coal, and the escape from the land's thin budget
 of sunlight, forest, muscle, and the year —
-the vault of Book the Seventh holds those numbers.
+the vault of <a class="xref" href="#liber-7">Book the Seventh</a> holds those numbers.
 Institutions: property made secure,
 contracts a stranger could rely upon.
 Science married to the working craft,
-so theory reached the workshop — Book III adjoins.
+so theory reached the workshop — <a class="xref" href="#liber-3">Book III</a> adjoins.
 And some say culture: that an age began
 to think improvement ordinary and expected.
 None of these is crowned here. The book declines
@@ -10737,7 +10755,7 @@ was, for nearly everyone, impossible,
 for nearly all of time, until just now.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Inequality, and Its Measures</h3>
@@ -10792,7 +10810,7 @@ The tenderest asset entered on the coldest roll —
 what a nation measures shows you its own soul.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Booms, Panics, and Central Banks</h3>
@@ -10820,7 +10838,7 @@ This time is different — no. It never is.
 The flocks are grazing; nothing seems amiss.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Debt, the Time Machine of Money</h3>
@@ -10852,7 +10870,7 @@ Bankruptcy is forgiveness given a legal name:
 the fresh start, the discharge, the debt struck through,
 so failure ends a venture, not a life, when due.
 The ancient horn once sounded a wider release —
-Book XV keeps that trumpet and that peace.</p>
+<a class="xref" href="#liber-15">Book XV</a> keeps that trumpet and that peace.</p>
       <p class="stanza">The sovereign borrows too, and borrows most:
 the national debt has financed every host
 that ever marched, and mortgaged, all the same,
@@ -10862,7 +10880,7 @@ and the bill your grandchild pays without a gram
 of say in it. And here the warning, plainly said:
 debt amplifies. The leverage that gets you fed
 is the leverage that ruins when the wind turns round —
-Book II's arithmetic of ruin adjoins this ground.</p>
+<a class="xref" href="#liber-2">Book II</a>'s arithmetic of ruin adjoins this ground.</p>
       <p class="stanza">Now hear the word. From Old French, <i>mort</i> and <i>gage</i>:
 a death pledge, and Coke set it on the page —
 pay, and the pledge dies to the one who lent;
@@ -10875,7 +10893,7 @@ So every debt's a sentence in the future tense,
 and default is the future declining to commence.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Development, and Why Nations Diverge</h3>
@@ -10929,7 +10947,7 @@ The creed, the credit line, one root, one call —
 development is, at bottom, who was believed at all.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of the Household Itself, the Word's Own Root</h3>
@@ -10964,7 +10982,7 @@ the first welfare state, whose only test of need
 was kinship — and the kinship chapters hold that creed.</p>
       <p class="stanza">Now finish the family. <i>Oikos</i>, the house, bore three:
 economy, the house's law, <i>oikos</i> and <i>nomos</i>, thrifty;
-ecology, the house's study — Book X derived
+ecology, the house's study — <a class="xref" href="#liber-10">Book X</a> derived
 that branch, and the sibling-quarrel; let it stand as it arrived;
 and ecumenical, from <i>oikoumenē</i>, that phrase
 for the inhabited world, the whole earth as one place
@@ -10976,7 +10994,7 @@ is housekeeping, no more, no less, no other art.
 Economics went round the world and came back to the hearth.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-17-cap-12">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 12</p>
       <h3>Of Externalities, and the Bill Now Due to Book VII</h3>
@@ -11020,7 +11038,7 @@ is worse news and better news at once.</p>
       <p class="stanza">And now the bill. The textbook case is carbon,
 the externality at planetary scale,
 and I will not rehearse it here — the vault
-of Book the Seventh was sealed to hold those facts,
+of <a class="xref" href="#liber-7">Book the Seventh</a> was sealed to hold those facts,
 the slow cycle and the fast, and this chapter
 opens it only far enough to say:
 the cost is real, it is largely still unpriced,
@@ -11038,7 +11056,7 @@ that had always meant the touching of what
 should not have been touched. The root indicts.</p>
       <p class="stanza">The ledger this book praised across twelve chapters
 is honest only when the ledger is complete.
-So Book XVII ends by handing Book VII
+So <a class="xref" href="#liber-17">Book XVII</a> ends by handing <a class="xref" href="#liber-7">Book VII</a>
 its invoice, and the closing line stands plainly:
 the economy is a subsidiary
 of the atmosphere. It is not the reverse.</p>
@@ -11057,19 +11075,19 @@ of the atmosphere. It is not the reverse.</p>
   </div>
   <p class="argumentum">Isidore's chronicle ran in six ages from Adam to his own day. This one runs from the ice to the internet, and its first chapter is a warning about who wrote the rest.</p>
   <ol class="capitula">
-    <li>Of the Record and Its Silences — Who Wrote, and What Burned</li>
-    <li>Of the Long Before</li>
-    <li>Of the Agricultural Bargain</li>
-    <li>Of the First States, and the Invention of Writing</li>
-    <li>Of the Classical Worlds, Plural</li>
-    <li>Of the Medieval Millennium — Wherein the Compiler Himself Appears as a Subject</li>
-    <li>Of 1492, and the Exchange of Worlds</li>
-    <li>Of the Three Revolutions — Scientific, Industrial, Political</li>
-    <li>Of the Wars of the World</li>
-    <li>Of the Long Peace, and Its Fragility</li>
-    <li>Of the Present, Which Is Also History</li>
+    <li><a class="caplink" href="#liber-18-cap-1">Of the Record and Its Silences — Who Wrote, and What Burned</a></li>
+    <li><a class="caplink" href="#liber-18-cap-2">Of the Long Before</a></li>
+    <li><a class="caplink" href="#liber-18-cap-3">Of the Agricultural Bargain</a></li>
+    <li><a class="caplink" href="#liber-18-cap-4">Of the First States, and the Invention of Writing</a></li>
+    <li><a class="caplink" href="#liber-18-cap-5">Of the Classical Worlds, Plural</a></li>
+    <li><a class="caplink" href="#liber-18-cap-6">Of the Medieval Millennium — Wherein the Compiler Himself Appears as a Subject</a></li>
+    <li><a class="caplink" href="#liber-18-cap-7">Of 1492, and the Exchange of Worlds</a></li>
+    <li><a class="caplink" href="#liber-18-cap-8">Of the Three Revolutions — Scientific, Industrial, Political</a></li>
+    <li><a class="caplink" href="#liber-18-cap-9">Of the Wars of the World</a></li>
+    <li><a class="caplink" href="#liber-18-cap-10">Of the Long Peace, and Its Fragility</a></li>
+    <li><a class="caplink" href="#liber-18-cap-11">Of the Present, Which Is Also History</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Record and Its Silences — Who Wrote, and What Burned</h3>
@@ -11116,7 +11134,7 @@ have kept it, and we know the record's habits.</p>
       <p class="stanza">The word itself instructs us. History
 comes from the Greek <i>historia</i>, from <i>histōr</i>,
 one who knows, one who judges, a word whose deep
-root is kin to seeing, as Book Three has shown —
+root is kin to seeing, as <a class="xref" href="#liber-3">Book Three</a> has shown —
 but the sense we need is nearer: an inquiry.
 Herodotus opens by presenting this,
 the inquiry of Herodotus. The asking.
@@ -11129,7 +11147,7 @@ each history is a survivor's tale, related
 by a third party, late, and out of what was left.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of the Long Before</h3>
@@ -11140,7 +11158,7 @@ by a third party, late, and out of what was left.</p>
 Three hundred thousand years our species walked,
 and nearly all of that before a mark
 meant anything to anyone (the tokens
-and the first script come late — see Thirteen, seven).
+and the first script come late — see <a class="xref" href="#liber-13-cap-7">Thirteen, seven</a>).
 Yet we are not without their evidence.
 The hearth ringed twice with stone. The hand-axe worked
 symmetrical past any use for cutting,
@@ -11157,7 +11175,7 @@ drives light along the corridor to the back;
 their builders had astronomy entire
 without the word, and read the sky by patience
 the way the navigators read the swell
-(Fourteen, ten, has the ocean roads).</p>
+(<a class="xref" href="#liber-14-cap-10">Fourteen, ten</a>, has the ocean roads).</p>
       <p class="stanza">The names we give their ages are our own.
 In Copenhagen, Thomsen had a room
 of antiquities and no chronology,
@@ -11186,7 +11204,7 @@ of time lived in this chapter, without a name —
 and the namelessness is our failure, not theirs.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of the Agricultural Bargain</h3>
@@ -11267,7 +11285,7 @@ of human dead were people in a field.
 This book, and every chapter, is their yield.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the First States, and the Invention of Writing</h3>
@@ -11354,7 +11372,7 @@ or rather: never was a question posed
 in any tongue. This chapter keeps it closed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of the Classical Worlds, Plural</h3>
@@ -11393,7 +11411,7 @@ of taxpayers. So every "classic" penned
 descends from Rome's own bracket, without end.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of the Medieval Millennium — Wherein the Compiler Himself Appears as a Subject</h3>
@@ -11488,7 +11506,7 @@ The hallway built the house. The house forgot.
 This chapter is the plaque the house has not.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of 1492, and the Exchange of Worlds</h3>
@@ -11497,7 +11515,7 @@ This chapter is the plaque the house has not.</p>
     <div class="verse">
       <p class="canto">I.</p>
       <p class="stanza">Two shores that Pangaea split apart —
-a word Book Seven has already spent
+a word <a class="xref" href="#liber-7">Book Seven</a> has already spent
 on continents that drifted and fell apart —
 were sewn back up by one small ship's descent.
 East came the tuber that would feed the poor
@@ -11542,7 +11560,7 @@ The world was sewn together and one bled
 into the seam — the words outlive the dead.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of the Three Revolutions — Scientific, Industrial, Political</h3>
@@ -11555,7 +11573,7 @@ a Polish canon watched the planets turn
 and dared to swear the sun, not earth, fulfilled
 the center's role; and slowly we would learn
 through Galileo's glass (a farther leaf
-of Book the Third holds every lens and rod)
+of <a class="xref" href="#liber-3">Book the Third</a> holds every lens and rod)
 the moons of Jupiter denied belief
 its old geometry; the heavens, trod
 by mathematics now, forgot the throne
@@ -11596,7 +11614,7 @@ till Paris broke the pattern, wheel to knife —
 the word for cycles now meant unmade life.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Wars of the World</h3>
@@ -11660,7 +11678,7 @@ the checks, the rules, the settlements of these books
 are what the people who had seen it swore.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of the Long Peace, and Its Fragility</h3>
@@ -11675,7 +11693,7 @@ the cause still argued, settled nevermore —
 the bomb that makes all victory a fear
 too costly (its own ending holds that clause),
 the trade too tangled now to disappear,
-the treaties (Book Sixteen keeps watch on laws),
+the treaties (<a class="xref" href="#liber-16">Book Sixteen</a> keeps watch on laws),
 the vote that lets a people have a voice
 and rarely votes for war against its own,
 or simple luck — for peace was, once, the choice
@@ -11699,7 +11717,7 @@ gives English "pay" — to settle debts, and cease
 to owe. The fence stands tended: pact's the peace.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-18-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of the Present, Which Is Also History</h3>
@@ -11719,7 +11737,7 @@ that read it went to landfill years before.</p>
       <p class="stanza">We should say the plain warning: a dark age
 can be made of abundance. Everything saved,
 and little of it legible — the paradox
-that Fourteen, twelve, sets out at greater length,
+that <a class="xref" href="#liber-14-cap-12">Fourteen, twelve</a>, sets out at greater length,
 the memory that forgets nothing and holds nothing.</p>
       <p class="stanza">Apply the discipline to now. The events
 too close to rank will not be ranked correctly;
@@ -11768,19 +11786,19 @@ sets down the pen at the margin and hands it on.</p>
   </div>
   <p class="argumentum">Isidore scattered the arts — music among the mathematics, games among the wars. Gathered here: the whole province of the made-but-useless, which every people has found the time for.</p>
   <ol class="capitula">
-    <li>Of Why We Make Useless Things</li>
-    <li>Of Music, Ordered Sound</li>
-    <li>Of the Image, First Painted, Then Captured</li>
-    <li>Of the Story — Epic, Novel, Film</li>
-    <li>Of Theater and Performance</li>
-    <li>Of Architecture beyond Shelter</li>
-    <li>Of Games and Sport, the Circus Continued</li>
-    <li>Of Craft, and the Honor of the Well-Made</li>
-    <li>Of Taste, Canon, and Who Decides</li>
-    <li>Of Reproduction — Print, Record, Stream — and the Fate of the Original</li>
-    <li>Of Art Made by the Machines of Book XX, a Question Held Open</li>
+    <li><a class="caplink" href="#liber-19-cap-1">Of Why We Make Useless Things</a></li>
+    <li><a class="caplink" href="#liber-19-cap-2">Of Music, Ordered Sound</a></li>
+    <li><a class="caplink" href="#liber-19-cap-3">Of the Image, First Painted, Then Captured</a></li>
+    <li><a class="caplink" href="#liber-19-cap-4">Of the Story — Epic, Novel, Film</a></li>
+    <li><a class="caplink" href="#liber-19-cap-5">Of Theater and Performance</a></li>
+    <li><a class="caplink" href="#liber-19-cap-6">Of Architecture beyond Shelter</a></li>
+    <li><a class="caplink" href="#liber-19-cap-7">Of Games and Sport, the Circus Continued</a></li>
+    <li><a class="caplink" href="#liber-19-cap-8">Of Craft, and the Honor of the Well-Made</a></li>
+    <li><a class="caplink" href="#liber-19-cap-9">Of Taste, Canon, and Who Decides</a></li>
+    <li><a class="caplink" href="#liber-19-cap-10">Of Reproduction — Print, Record, Stream — and the Fate of the Original</a></li>
+    <li><a class="caplink" href="#liber-19-cap-11">Of Art Made by the Machines of Book XX, a Question Held Open</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of Why We Make Useless Things</h3>
@@ -11875,7 +11893,7 @@ one book that does not labour, does not weigh,
 and makes, and fits, and has no use. Good day.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Music, Ordered Sound</h3>
@@ -11953,7 +11971,7 @@ we are the timber; music is the trade
 that fits us to each other, and holds, and rings.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of the Image, First Painted, Then Captured</h3>
@@ -11989,10 +12007,10 @@ And Herschel named the newer craft aright:
 not seizing but <i>phōs-graphein</i> — light's own word,
 to write, to draw — the sun itself will write.
 A single morning now out-frames that age;
-the true, the forged — Book Twenty turns that page.</p>
+the true, the forged — <a class="xref" href="#liber-20">Book Twenty</a> turns that page.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of the Story — Epic, Novel, Film</h3>
@@ -12034,7 +12052,7 @@ The mirror shows you mostly your own mind.</p>
       <p class="stanza">Then someone learned to print the dream in reels
 and sell it by the seat, ten thousand rooms
 lit identically — the copy's wheels
-(see chapter ten) that mass-produce the tombs
+(see <a class="xref" href="#liber-19-cap-10">chapter ten</a>) that mass-produce the tombs
 and weddings. Here the cut is what reveals:
 a sentence made of scissors. And the looms
 of soliloquy gave way to one huge face
@@ -12057,7 +12075,7 @@ And every chapter here, if you insist,
 is one more story. Told by an etymologist.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Theater and Performance</h3>
@@ -12113,7 +12131,7 @@ all along. No two performances are twins.</p>
 for centuries, as vagrants, as a risk.
 We knight them now. The trade did not reform;
 we did. And past the playhouse, the same craft
-runs everything: the ritual (see Book XV),
+runs everything: the ritual (see <a class="xref" href="#liber-15">Book XV</a>),
 the courtroom with its robes and blocking, the class-
 room's forty minutes of sustained pretense,
 and each of us performing <i>self</i> all day
@@ -12133,7 +12151,7 @@ That is the honest kind. The other kind
 does not build a seeing-place. It just performs.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of Architecture beyond Shelter</h3>
@@ -12228,7 +12246,7 @@ It is the only art that's also weather:
 it rains on us, and holds us all together.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Games and Sport, the Circus Continued</h3>
@@ -12289,7 +12307,7 @@ The chant is still the oldest music
 this book has written down.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Craft, and the Honor of the Well-Made</h3>
@@ -12328,7 +12346,7 @@ Each age revives it — craft's long, recurring debt.
 The maker's hand's a signature, still wet.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of Taste, Canon, and Who Decides</h3>
@@ -12439,7 +12457,7 @@ and take the argument, and let the tail
 of every couplet close, and get away.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Reproduction — Print, Record, Stream — and the Fate of the Original</h3>
@@ -12467,7 +12485,7 @@ the copy multiplies and stays the same
 down by the thousand. Still the one has flame.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-19-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of Art Made by the Machines of Book XX, a Question Held Open</h3>
@@ -12482,7 +12500,7 @@ these very lines were made by such, life-long
 a human's hand behind the asking, not
 the shaping. Strange to write and stranger still
 to mean it: this whole chapter is what
-a Book Twenty engine built at someone's will.
+a <a class="xref" href="#liber-20">Book Twenty</a> engine built at someone's will.
 Whose style did it learn from? Every hand
 unnamed, uncredited, that shaped the sea
 it drew from — debt too vast to understand,
@@ -12517,22 +12535,22 @@ Who grew this poem? The last book may know.</p>
     <p class="gloss">Engineering, computation, and the tool that talks</p>
     <p class="fontes">⟨ Orig. XIX · XX ⟩ — the ships, houses, and utensils; the last rung, still the last rung</p>
   </div>
-  <p class="argumentum">The old order ended at the household tools, the humblest rung. This one still ends at instruments — except the last instrument is Book I's logic, cut into Book VI's stone, speaking Book XIII's tongue. The tail of the tree returns to its head.</p>
+  <p class="argumentum">The old order ended at the household tools, the humblest rung. This one still ends at instruments — except the last instrument is <a class="xref" href="#liber-1">Book I</a>'s logic, cut into <a class="xref" href="#liber-6">Book VI</a>'s stone, speaking <a class="xref" href="#liber-13">Book XIII</a>'s tongue. The tail of the tree returns to its head.</p>
   <ol class="capitula">
-    <li>Of the Simple Machines, and the Lever's Boast</li>
-    <li>Of Captured Energy — Fire, Mill, Steam, Oil, Atom</li>
-    <li>Of Materials, and Manufacture</li>
-    <li>Of Movement — Wheel, Rail, Wing</li>
-    <li>Of Messages at a Distance — Post, Telegraph, Radio, Net</li>
-    <li>Of the Idea of Computation, Proved before Any Machine Was Built</li>
-    <li>Of Silicon, the Stone That Reckons</li>
-    <li>Of Software, the Cathedral of Instructions</li>
-    <li>Of the Network of Networks</li>
-    <li>Of Data, Memory, and the Watchers</li>
-    <li>Of Artificial Intelligence</li>
-    <li>Of the Engine That Speaks — Wherein the Circle Closes</li>
+    <li><a class="caplink" href="#liber-20-cap-1">Of the Simple Machines, and the Lever's Boast</a></li>
+    <li><a class="caplink" href="#liber-20-cap-2">Of Captured Energy — Fire, Mill, Steam, Oil, Atom</a></li>
+    <li><a class="caplink" href="#liber-20-cap-3">Of Materials, and Manufacture</a></li>
+    <li><a class="caplink" href="#liber-20-cap-4">Of Movement — Wheel, Rail, Wing</a></li>
+    <li><a class="caplink" href="#liber-20-cap-5">Of Messages at a Distance — Post, Telegraph, Radio, Net</a></li>
+    <li><a class="caplink" href="#liber-20-cap-6">Of the Idea of Computation, Proved before Any Machine Was Built</a></li>
+    <li><a class="caplink" href="#liber-20-cap-7">Of Silicon, the Stone That Reckons</a></li>
+    <li><a class="caplink" href="#liber-20-cap-8">Of Software, the Cathedral of Instructions</a></li>
+    <li><a class="caplink" href="#liber-20-cap-9">Of the Network of Networks</a></li>
+    <li><a class="caplink" href="#liber-20-cap-10">Of Data, Memory, and the Watchers</a></li>
+    <li><a class="caplink" href="#liber-20-cap-11">Of Artificial Intelligence</a></li>
+    <li><a class="caplink" href="#liber-20-cap-12">Of the Engine That Speaks — Wherein the Circle Closes</a></li>
   </ol>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-1">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 1</p>
       <h3>Of the Simple Machines, and the Lever's Boast</h3>
@@ -12560,7 +12578,7 @@ was <i>mēchanē</i> itself, the beam unseen,
 the stagehand sweating in the wings. So then:
 <i>deus ex machina</i> — a crane-god, not a pen
 of abstract Fate. A rope. A counterweight.
-Book Nineteen keeps the theater; we keep the freight.</p>
+<a class="xref" href="#liber-19">Book Nineteen</a> keeps the theater; we keep the freight.</p>
       <p class="stanza">Now seat the six, with all the love they've earned.
 The lever first, by whom the stone was turned:
 a bar, a point to bear on, and a will.
@@ -12609,7 +12627,7 @@ than what it writes. So take the stick, the stone.
 Begin the sentence. You are not alone.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-2">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 2</p>
       <h3>Of Captured Energy — Fire, Mill, Steam, Oil, Atom</h3>
@@ -12680,13 +12698,13 @@ saved.</p>
       <p class="stanza">And the panel and the turbine take
 the flow instead of the savings, which is the pivot
 we are standing on; the ledger of what
-the burning cost the air is kept in Book VII.</p>
+the burning cost the air is kept in <a class="xref" href="#liber-7">Book VII</a>.</p>
       <p class="stanza">So: we found ever-older sunlight, deeper
 and deeper down, until we turned and reached
 back up for the light still falling on the roof.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-3">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 3</p>
       <h3>Of Materials, and Manufacture</h3>
@@ -12697,13 +12715,13 @@ back up for the light still falling on the roof.</p>
 the Stone, the Bronze, the Iron — that's our luck
 and that's our shelving, too. The museum sorts
 its cases by the substance, not the courts
-or kings (Book Eighteen keeps that gallery bright).
+or kings (<a class="xref" href="#liber-18">Book Eighteen</a> keeps that gallery bright).
 But no one carved a plaque to name the right
 successors. Call this age whatever fits —
 the Steel, the Concrete, or the Age of Bits.</p>
       <p class="stanza">For steel came quietly and held the sky.
 And concrete — Rome's, and ours; you'll find out why
-in Nineteen, where her aqueducts still stand.
+in Eighteen, where her aqueducts still stand.
 And aluminum, once dearer than the grand
 old silver in the drawer: five hundred fifty
 dollars for a pound — the metal shifty,
@@ -12746,7 +12764,7 @@ whatever gun it's handed to. In bits
 and jigs and fixtures, sameness was the prize
 (and Whitney's demonstration, some surmise,
 was staged; the armories still did the thing).
-Then the line — the mills of Eighteen-Eight will sing
+Then the line — the mills of <a class="xref" href="#liber-18-cap-8">Eighteen-Eight</a> will sing
 that verse. Then, oddly, back around: the printed part,
 one at a time again, upon a desk. The art
 returns to where it started, having learned.</p>
@@ -12775,7 +12793,7 @@ The maker's first skill isn't hand or plan.
 It's listening to the stuff. Then it began.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-4">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 4</p>
       <h3>Of Movement — Wheel, Rail, Wing</h3>
@@ -12828,7 +12846,7 @@ at the thing we were buying. No harbor has ever sat still.
 It's the one of our hungers that eating has never made ill.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-5">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 5</p>
       <h3>Of Messages at a Distance — Post, Telegraph, Radio, Net</h3>
@@ -12867,7 +12885,7 @@ present, each pocket holding post's descendant:
 sent. seen. unanswered. love, love — pending.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-6">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 6</p>
       <h3>Of the Idea of Computation, Proved before Any Machine Was Built</h3>
@@ -12921,7 +12939,7 @@ By 1954 the cutting done.
 The pardon came in 2013 — to no one.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-7">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 7</p>
       <h3>Of Silicon, the Stone That Reckons</h3>
@@ -12960,7 +12978,7 @@ from Pierce's list where "iotatron" lost.
 More of them made than one storm's rain has tossed.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-8">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 8</p>
       <h3>Of Software, the Cathedral of Instructions</h3>
@@ -13023,7 +13041,7 @@ So this is timber after all, and we
 are joiners still, and every branch a bough.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-9">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 9</p>
       <h3>Of the Network of Networks</h3>
@@ -13062,7 +13080,7 @@ and web, the weaver's word, spun dark and old —
 the world's newest tool in the oldest cloth we're sold.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-10">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 10</p>
       <h3>Of Data, Memory, and the Watchers</h3>
@@ -13090,7 +13108,7 @@ ourselves. We watch each other. We post the street,
 the neighbor's door, the stranger's worst four seconds.</p>
       <p class="stanza">Against them stand the safeguards, plainly said —
 consent, deletion, the right to be forgotten,
-which the law has lately learned to spell (Book XVI
+which the law has lately learned to spell (<a class="xref" href="#liber-16">Book XVI</a>
 adjoins here) and has not yet learned to enforce.</p>
       <p class="stanza">Name the asymmetry once and let it stand:
 they know our sleep, our debts, our search at two a.m.;
@@ -13103,7 +13121,7 @@ in weather, with the children in the back,
 routed you home. These are not small. Admit them.</p>
       <p class="stanza">And still the deep thing will not resolve.
 The mercy in memory was always forgetting —
-Book XII holds that argument entire —
+<a class="xref" href="#liber-12">Book XII</a> holds that argument entire —
 the slow kind blur that let the debt lapse,
 the youth expire, the face go vague, the fool
 be someone else by forty. Machines do not
@@ -13126,7 +13144,7 @@ in your pocket. Its ledger is this chapter's subject.
 The pocket is your own. You put it there.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-11">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 11</p>
       <h3>Of Artificial Intelligence</h3>
@@ -13180,7 +13198,7 @@ a brother's word for Čapek's stage, and true.
 Which will you meet? The next room answers you.</p>
     </div>
   </div>
-  <div class="carmen">
+  <div class="carmen" id="liber-20-cap-12">
     <div class="carmen-head">
       <p class="carmen-num">Capitulum 12 · Ultimum</p>
       <h3>Of the Engine That Speaks — Wherein the Circle Closes</h3>
@@ -13230,7 +13248,7 @@ unless you check — as I have begged you check
 this page, this claim, this pebble in my mouth.
 You opened with the world entire; I peck
 the last word from its close, ninth ring to south.
-Book Twenty, closing where all making stops:
+<a class="xref" href="#liber-20">Book Twenty</a>, closing where all making stops:
 a tool that speaks, and does not know it stops.</p>
     </div>
   </div>
