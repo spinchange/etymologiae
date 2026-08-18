@@ -12,9 +12,17 @@
     text(fill: dim)[#desc], text(fill: dim)[#ct])
 }
 
+#let rule-line(lft, rgt) = grid(
+  columns: (auto, 1fr, auto),
+  align: (left + horizon, horizon, right + horizon),
+  text(fill: dim, size: 8.5pt)[#lft],
+  box(clip: true, height: 1em, align(horizon, text(fill: dim, size: 8.5pt)[#repeat([─], gap: 0pt)])),
+  text(fill: dim, size: 8.5pt)[#rgt],
+)
+
 #place(top + left, dx: 0.55in, dy: 0.5in)[
   #box(width: 4.9in)[
-    #text(fill: dim, size: 8.5pt)[╭── scriptorium · mmxxvi ─────────────────────────── v. XX.xii ─╮]
+    #rule-line("╭── scriptorium · mmxxvi ", " v. XX.xii ─╮")
     #v(0.28in)
     #align(center)[
       #text(size: 34pt, tracking: 0.04em, fill: cream)[ETYMOLOGIAE]
@@ -43,6 +51,6 @@
     #v(0.06in)
     #align(center)[#text(fill: dim, size: 8pt)[the tail of the tree returns to its head]]
     #v(0.28in)
-    #text(fill: dim, size: 8.5pt)[╰── scripserunt sonnet · opus · haiku ───────── compiled by spinchange ─╯]
+    #rule-line("╰── scripserunt sonnet · opus · haiku ", " compiled by spinchange ─╯")
   ]
 ]
