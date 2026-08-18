@@ -457,19 +457,18 @@ def build_cover_typ():
             f'      {lead} liber {lrom} · {lb["titulus"].lower()} #h(1fr) '
             f'liber {rrom} · {rb["titulus"].lower()} {tail} \\')
     marquee = "\n".join(marquee)
-    cov = f"""// cover.typ — CLI splash x scriptorium, 6x9
+    prelude = """// Etymologiae MMXXVI — cover system (CLI splash x scriptorium)
 #let bg = rgb("1E1A15")
 #let cream = rgb("E6DFD1")
 #let rubric = rgb("D97F6F")
 #let dim = rgb("8A8071")
-#set page(width: 6in, height: 9in, margin: 0in, fill: bg)
 #set text(font: ("Cascadia Mono", "Consolas", "Segoe UI Symbol"), fill: cream, size: 10pt)
 
-#let row(mark: "", name: "", desc: "", ct: "") = {{
+#let row(mark: "", name: "", desc: "", ct: "") = {
   grid(columns: (1.4em, 5.4em, 1fr, auto), align: (left, left, left, right),
     text(fill: rubric)[#mark], text(fill: cream)[#name],
     text(fill: dim)[#desc], text(fill: dim)[#ct])
-}}
+}
 
 #let rule-line(lft, rgt) = grid(
   columns: (auto, 1fr, auto),
@@ -478,9 +477,8 @@ def build_cover_typ():
   box(clip: true, height: 1em, align(horizon, text(fill: dim, size: 8.5pt)[#repeat([─], gap: 0pt)])),
   text(fill: dim, size: 8.5pt)[#rgt],
 )
-
-#place(top + left, dx: 0.55in, dy: 0.5in)[
-  #box(width: 4.9in)[
+"""
+    front = f"""#box(width: 4.9in)[
     #rule-line("╭── scriptorium · mmxxvi ", " v. XX.xii ─╮")
     #v(0.28in)
     #align(center)[
@@ -491,7 +489,7 @@ def build_cover_typ():
       #text(size: 8.5pt, fill: dim)[after Isidore of Seville · bishop, compiler, d. 636]
     ]
     #v(0.32in)
-    #text(fill: rubric)[\\$] #text(fill: cream)[dispatch] #text(fill: dim)[--libri 20 --carmina 218 --in verse]
+    #text(fill: rubric)[\\$] #text(fill: cream)[dispatch] #text(fill: dim)[\\-\\-libri 20 \\-\\-carmina 218 \\-\\-in verse]
     #v(0.16in)
 {rows}
   #row(mark: "✔", name: "bench", desc: "editorial audit · every line-end", ct: "xxiv")
@@ -508,12 +506,67 @@ def build_cover_typ():
     #align(center)[#text(fill: dim, size: 8pt)[the tail of the tree returns to its head]]
     #v(0.17in)
     #rule-line("╰── scripserunt sonnet · opus · haiku ", " compiled by spinchange ─╯")
-  ]
-]
-"""
+  ]"""
+    back = """#box(width: 4.9in)[
+    #rule-line("╭── de hoc libro ", " nota ─╮")
+    #v(0.26in)
+    #text(fill: rubric)[\\$] #text(fill: cream)[etymologiae] #text(fill: dim)[\\-\\-about]
+    #v(0.12in)
+    #block[
+      #set text(size: 9pt)
+      #set par(leading: 0.6em, spacing: 1.2em)
+      Isidore of Seville ordered all knowledge into twenty books, derived every thing from its name, and invented half of the derivations. This edition repeats the gesture fourteen centuries on, with the errors inverted: the books reordered by emergence — mathematics first, the sacred demoted to Book XV, the talking machine last — and every etymology true, or honestly confessed disputed, or famously false and here debunked.
+
+      All 218 chapters are poems. Sonnets and heroic couplets, blank verse and ottava rima, a pantoum for the states of matter, a villanelle whose refrains are copies, terza rima for the earth's interior, haibun for the beasts. They were written by dispatched scribe-engines — #smallcaps[Sonnet], #smallcaps[Opus], and #smallcaps[Haiku] — under an editorial bench that audited every line-end, for a reader at home in both the terminal and the scriptorium.
+    ]
+    #v(0.22in)
+    #block(inset: (left: 0.75em), stroke: (left: 1.5pt + rubric))[
+      #set text(size: 9pt)
+      #set par(leading: 0.6em)
+      Book Twenty, closing where all making stops: \\
+      a tool that speaks, and does not know it stops. \\
+      #text(fill: dim, size: 8pt)[— the edition's last lines]
+    ]
+    #v(0.24in)
+    #text(fill: rubric)[\\$] #text(fill: cream)[etymologiae] #text(fill: dim)[\\-\\-serve]
+    #v(0.08in)
+    #text(fill: dim, size: 9pt)[the living text, every piece anchored to every piece it names:] \\
+    #text(fill: cream, size: 9.5pt)[spinchange.github.io\\/etymologiae]
+  ]"""
+    cov = (prelude +
+           "#set page(width: 6in, height: 9in, margin: 0in, fill: bg)\n\n" +
+           "#place(top + left, dx: 0.55in, dy: 0.5in)[\n  " + front + "\n]\n")
     with io.open(os.path.join(TYPD, "cover.typ"), "w", encoding="utf-8") as f:
         f.write(cov)
     print("cover source written")
+
+    # ---- full paperback wrap: back + spine + front, KDP geometry ----
+    PAGES = 343
+    THICK = 0.002347            # in/page, KDP premium color on white
+    S = round(PAGES * THICK, 4) # spine width
+    BLEED = 0.125
+    W = round(2 * BLEED + 12 + S, 4)
+    H = 9 + 2 * BLEED
+    spine = f"""#place(top + left, dx: {BLEED + 6}in, dy: {BLEED}in)[
+  #box(width: {S}in, height: 9in)[
+    #align(center + horizon)[
+      #rotate(90deg, reflow: true)[
+        #text(fill: dim, size: 10pt)[❧]#h(0.35in)#text(size: 13pt, tracking: 0.14em, fill: cream)[ETYMOLOGIAE]#h(0.22in)#text(size: 13pt, tracking: 0.14em, fill: rubric)[MMXXVI]#h(0.35in)#text(fill: dim, size: 10pt)[❧]
+      ]
+    ]
+  ]
+]"""
+    wrap = (prelude +
+            f'#set document(title: "Etymologiae MMXXVI — paperback wrap")\n' +
+            f"#set page(width: {W}in, height: {H}in, margin: 0in, fill: bg)\n\n" +
+            f"// back cover (left panel); lower right of this panel left clear for the barcode\n" +
+            f"#place(top + left, dx: {BLEED + 0.55}in, dy: {BLEED + 0.5}in)[\n  " + back + "\n]\n\n" +
+            spine + "\n\n" +
+            f"// front cover (right panel)\n" +
+            f"#place(top + left, dx: {BLEED + 6 + S + 0.55}in, dy: {BLEED + 0.5}in)[\n  " + front + "\n]\n")
+    with io.open(os.path.join(TYPD, "wrap.typ"), "w", encoding="utf-8") as f:
+        f.write(wrap)
+    print(f"wrap source written (spine {S}in, page {W}x{H}in)")
 
 build_typ()
 build_cover_typ()

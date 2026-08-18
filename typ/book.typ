@@ -22874,5 +22874,6 @@ a tool that speaks, and does not know it stops.
 #v(1fr)
 #align(center)[#text(fill: rubric)[❧]]
 #v(0.5em)
-#par(first-line-indent: 0em)[#emph[Compiled in the year MMXXVI, after the manner of Isidore of Seville, who ordered all things in twenty books, left the work unfinished, and was made patron of the internet — a jurisdiction he would have accepted without surprise.]]
+#par(first-line-indent: 0em)[#emph[Compiled in the year MMXXVI, after the manner of Isidore of Seville, who ordered all things in twenty books, left the work unfinished, and was made patron of the internet — a jurisdiction he would have accepted without surprise.
+  \<p class="editiones"\>Editiones: the codex as EPUB · as a book, six inches by nine\</p\>]]
 #v(1.6fr)
