@@ -446,6 +446,17 @@ def build_cover_typ():
     ]
     rows = "\n".join(
         f'  #row(mark: "{m}", name: "{n}", desc: "{d}", ct: "{ct}")' for m, n, d, ct in guilds)
+    marquee = []
+    for i in range(10):
+        lb, rb = BOOKS[i], BOOKS[i + 10]
+        lead = "┌─" if i == 0 else ("└─" if i == 9 else "├─")
+        tail = "─┐" if i == 0 else ("─┘" if i == 9 else "─┤")
+        lrom = lb["num"].replace("Liber ", "")
+        rrom = rb["num"].replace("Liber ", "")
+        marquee.append(
+            f'      {lead} liber {lrom} · {lb["titulus"].lower()} #h(1fr) '
+            f'liber {rrom} · {rb["titulus"].lower()} {tail} \\')
+    marquee = "\n".join(marquee)
     cov = f"""// cover.typ — CLI splash x scriptorium, 6x9
 #let bg = rgb("1E1A15")
 #let cream = rgb("E6DFD1")
@@ -486,17 +497,16 @@ def build_cover_typ():
   #row(mark: "✔", name: "bench", desc: "editorial audit · every line-end", ct: "xxiv")
   #row(mark: "⣿", name: "regula", desc: "etymologiae verae · disputes confessed", ct: "✓")
   #row(mark: "❧", name: "anchors", desc: "omnia inter se ligata", ct: "77")
-    #v(0.24in)
-    #text(fill: dim, size: 8.5pt)[
-      ├─ liber I · mathematica #h(1fr) liber XV · de sacris ─┤ \\
-      ├─ liber X · vita · bestiae #h(1fr) liber XVIII · historia ─┤ \\
-      └─ liber XIII · lingua #h(1fr) liber XX · machinae loquentes ─┘
+    #v(0.17in)
+    #text(fill: dim, size: 8pt)[
+      #set par(leading: 0.52em)
+{marquee}
     ]
-    #v(0.30in)
+    #v(0.17in)
     #align(center)[#text(fill: rubric, size: 13pt)[❧]]
-    #v(0.06in)
+    #v(0.05in)
     #align(center)[#text(fill: dim, size: 8pt)[the tail of the tree returns to its head]]
-    #v(0.28in)
+    #v(0.17in)
     #rule-line("╰── scripserunt sonnet · opus · haiku ", " compiled by spinchange ─╯")
   ]
 ]

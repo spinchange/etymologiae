@@ -40,17 +40,25 @@
   #row(mark: "✔", name: "bench", desc: "editorial audit · every line-end", ct: "xxiv")
   #row(mark: "⣿", name: "regula", desc: "etymologiae verae · disputes confessed", ct: "✓")
   #row(mark: "❧", name: "anchors", desc: "omnia inter se ligata", ct: "77")
-    #v(0.24in)
-    #text(fill: dim, size: 8.5pt)[
-      ├─ liber I · mathematica #h(1fr) liber XV · de sacris ─┤ \
-      ├─ liber X · vita · bestiae #h(1fr) liber XVIII · historia ─┤ \
-      └─ liber XIII · lingua #h(1fr) liber XX · machinae loquentes ─┘
+    #v(0.17in)
+    #text(fill: dim, size: 8pt)[
+      #set par(leading: 0.52em)
+      ┌─ liber I · mathematica #h(1fr) liber XI · homo ─┐ \
+      ├─ liber II · de fortuna #h(1fr) liber XII · mens ─┤ \
+      ├─ liber III · de methodo #h(1fr) liber XIII · lingua ─┤ \
+      ├─ liber IV · physica #h(1fr) liber XIV · societas ─┤ \
+      ├─ liber V · cosmos #h(1fr) liber XV · de sacris ─┤ \
+      ├─ liber VI · de elementis #h(1fr) liber XVI · leges et civitas ─┤ \
+      ├─ liber VII · terra #h(1fr) liber XVII · oeconomica ─┤ \
+      ├─ liber VIII · vita #h(1fr) liber XVIII · historia ─┤ \
+      ├─ liber IX · de origine specierum #h(1fr) liber XIX · artes ─┤ \
+      └─ liber X · animalia et herbae #h(1fr) liber XX · machinae loquentes ─┘ \
     ]
-    #v(0.30in)
+    #v(0.17in)
     #align(center)[#text(fill: rubric, size: 13pt)[❧]]
-    #v(0.06in)
+    #v(0.05in)
     #align(center)[#text(fill: dim, size: 8pt)[the tail of the tree returns to its head]]
-    #v(0.28in)
+    #v(0.17in)
     #rule-line("╰── scripserunt sonnet · opus · haiku ", " compiled by spinchange ─╯")
   ]
 ]
